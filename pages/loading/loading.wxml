@@ -1,0 +1,7 @@
+<!--pages/loading/loading.wxml-->
+<view class='loadingPage'>
+  <view class='loadingImage'>
+    <view class='image'></view>
+    <text class='center'>Loading<text class='dotting'></text></text>
+  </view>
+</view>
