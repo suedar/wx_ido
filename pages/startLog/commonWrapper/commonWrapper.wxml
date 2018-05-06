@@ -1,0 +1,7 @@
+<!--pages/startLog/commonWrapper/commonWrapper.wxml-->
+<view class='startBody'>
+  <view class='start'>
+    <slot></slot>
+  </view>
+</view>
+
