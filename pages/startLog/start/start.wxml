@@ -1,7 +1,5 @@
 <!--pages/startLog/start/start.wxml-->
-
-
-<commonWrapper>
+<common-wrapper>
   <view class='startBody'>
   <view class='start'>
     <view class='top'>></view>
@@ -22,4 +20,4 @@
     </view>
   </view>
 </view>
-</commonWrapper>
+</common-wrapper>

@@ -1,0 +1,13 @@
+<!--pages/startLog/displayPage/displayPage.wxml-->
+<commonWrapper>
+  <view class='display-main'>
+    <view class='first'>
+
+    </view>
+    <view class='second'>
+      
+    </view>
+    <view class='third'></view>
+    <view class='fourth'></view>
+  </view>
+</commonWrapper>

@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/loading/loading",
     "pages/startLog/start/start",
-    "pages/startLog/commonWrapper/commonWrapper"
+    "pages/startLog/commonWrapper/commonWrapper",
+    "pages/startLog/displayPage/displayPage"
   ],
   "window":{
     "backgroundTextStyle":"light",

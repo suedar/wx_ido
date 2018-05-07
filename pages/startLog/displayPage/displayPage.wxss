@@ -1,0 +1,46 @@
+/* pages/startLog/displayPage/displayPage.wxss */
+.display-main{
+  position: relative;
+}
+.display-main .first{
+   width: 0;
+    height: 0;
+    border-top: 20vh solid #d13139;
+    border-right: 80vw solid transparent;
+}
+.display-main .second{
+   width: 0;
+    height: 0;
+    position: relative;
+     border-top: 20vh solid #e5625c;
+    border-right: 80vw solid transparent; 
+}
+.display-main .second::before{
+  position: absolute;
+  content: '';
+  top:-40vh;
+  border-left: 80vw solid transparent;
+  border-bottom: 20vh solid #e5625c;      
+}
+.display-main .third{
+   width: 0;
+    height: 0;
+    position: relative;
+     border-top: 20vh solid #f9bf76;
+    border-right: 80vw solid transparent; 
+}
+.display-main .third::before{
+  position: absolute;
+  content: '';
+  top:-40vh;
+  border-left: 80vw solid transparent;
+  border-bottom: 20vh solid #f9bf76;      
+}
+.display-main .fourth{
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 20vh solid #8eb2c5;
+  border-left: 80vw solid transparent;
+}
