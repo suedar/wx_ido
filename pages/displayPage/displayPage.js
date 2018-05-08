@@ -1,4 +1,4 @@
-// pages/startLog/displayPage/displayPage.js
+// pages/displayPage/displayPage.js
 Page({
 
   /**

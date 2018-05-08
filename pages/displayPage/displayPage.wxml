@@ -1,13 +1,14 @@
 <!--pages/startLog/displayPage/displayPage.wxml-->
-<commonWrapper>
+<view class='main'>
   <view class='display-main'>
     <view class='first'>
-
+      <view class='dis-word'>
+      <view class='shape'></view> #定制计划
+      </view>
     </view>
-    <view class='second'>
-      
+    <view class='second'>     
     </view>
     <view class='third'></view>
     <view class='fourth'></view>
   </view>
-</commonWrapper>
+</view>

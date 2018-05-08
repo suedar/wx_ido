@@ -6,12 +6,18 @@ App({
   onLaunch: function () {
     wx.login({
       success: res => {
-        // console.log(res)
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log(res)
+        //发送 res.code 到后台换取 openId, sessionKey, unionId
         // wx.request({
-        //   url: 'http://139.199.190.208:8088/user/login/02190HA7283tAK0gYuz729DnA7290HAY', // 后端服务器
+        //   url: 'https://wxapi.devoted.net.cn', // 后端服务器
         //   data: {
         //     code: res.code
+        //   },
+        //   success:(res)=>{
+        //     console.log(res)
+        //   },
+        //   fail: (res) => {
+        //     console.log(res)
         //   }
         // })
       }

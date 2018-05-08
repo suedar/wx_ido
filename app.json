@@ -5,7 +5,7 @@
     "pages/loading/loading",
     "pages/startLog/start/start",
     "pages/startLog/commonWrapper/commonWrapper",
-    "pages/startLog/displayPage/displayPage"
+    "pages/displayPage/displayPage"
   ],
   "window":{
     "backgroundTextStyle":"light",

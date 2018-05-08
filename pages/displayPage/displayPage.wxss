@@ -1,0 +1,53 @@
+/* pages/startLog/displayPage/displayPage.wxss */
+.display-main{
+  position: relative;
+  z-index: -1;
+}
+.display-main .first{
+   width: 0;
+    height: 0;
+    border-top: 33.3vh solid #d13139;
+    border-right: 100vw solid transparent;
+}
+.display-main .second{
+   width: 0;
+    height: 0;
+    position: relative;
+    border-top: 33.3vh solid #e5625c;
+    border-right: 100vw solid transparent; 
+}
+.display-main .second::before{
+  position: absolute;
+  content: '';
+   top:-66.6vh; 
+  border-left: 100vw solid transparent;
+  border-bottom: 33.3vh solid #e5625c;      
+}
+.display-main .third{
+   width: 0;
+    height: 0;
+    position: relative;
+     border-top: 33.3vh solid #f9bf76;
+    border-right: 100vw solid transparent; 
+}
+.display-main .third::before{
+  position: absolute;
+  content: '';
+  top:-66.6vh;
+  border-left: 100vw solid transparent;
+  border-bottom: 33.3vh solid #f9bf76;      
+}
+.display-main .fourth{
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 33.4vh solid #8eb2c5;
+  border-left: 100vw solid transparent;
+}
+.display-main .first .dis-word{
+  /* width: 100px;
+  height: 100px; */
+  z-index: 3;
+  color: #fff;
+}

@@ -47,7 +47,7 @@
 				{
 					"id": 2,
 					"name": "displayPage",
-					"pathName": "pages/startLog/displayPage/displayPage",
+					"pathName": "pages/displayPage/displayPage",
 					"query": ""
 				}
 			]
