@@ -2,8 +2,11 @@
 .display-main{
   position: relative;
   z-index: -1;
+  /* text-align: center; */
 }
 .display-main .first{
+  /* text-align: center; */
+  position: relative;
    width: 0;
     height: 0;
     border-top: 33.3vh solid #d13139;
@@ -46,8 +49,20 @@
   border-left: 100vw solid transparent;
 }
 .display-main .first .dis-word{
+  width: 100px;
+  position: absolute;
+  top: -25vh;
+   left: calc(50vw - 50px); 
   /* width: 100px;
   height: 100px; */
   z-index: 3;
   color: #fff;
+}
+.display-main .first .dis-word .shape{
+  display: inline-block; 
+  width: 0px;
+  height: 0px;
+  border-left: 7.5px solid transparent; 
+  border-right: 7.5px solid transparent; 
+  border-bottom: 13px solid red; 
 }
