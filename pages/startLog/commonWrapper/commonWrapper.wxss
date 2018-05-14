@@ -12,8 +12,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80vw;
-  height: 60vh;
+  /* width: 80vw;
+  height: 40vh; */
   transform: translate(-50%, -50%);
   background-color: white;
   display: flex;

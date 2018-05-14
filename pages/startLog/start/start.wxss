@@ -12,8 +12,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80%;
-  height: 60vh;
+  width: 80vw;
+  height: 50vh; 
   transform: translate(-50%, -50%);
   background-color: white;
   display: flex;
@@ -21,59 +21,51 @@
   justify-content: space-between;
 }
 .startBody .start .top{
-  /* margin-top: 3rem; */
-  margin-left: .5rem;
-  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+   border: 1px solid gray;    
+  position: relative;
 }
-.startBody .start .middle{
-  width: 62%;
-  /* height: 40%; */
-  text-align: center;
-  margin: 0 auto;
+.startBody .start .top::before{
+  position: absolute;
+  content: '';
+  bottom: 0px;
+  width: 50.71px;
+  margin: 0px 10px;
+  height: 0px;
+  border: .6px solid #000;
+      transform:rotate(-45deg);    
+     transform-origin: -10px; 
+  /* border-left: 3px solid transparent;
+  border-right: 3px solid transparent; */
 }
-.startBody .start .middle .word{
-     text-align: left;
-  /* padding-left: 25rpx;      */
-     /* width: 103px;    */
+.startBody .start .top::after{
+  position: absolute;
+  content: '';
+  bottom: 0px;
+  width: 50.71px;
+  margin: 0px 10px;
+  height: 0px;
+  border: .6px solid #000;
+          transform:rotate(45deg);     
+       transform-origin: 105%;      
+  /* border-left: 3px solid transparent;
+  border-right: 3px solid transparent; */
 }
-image{
-  width: 150rpx;
-  height: 150rpx;
+.startBody .start .top .flag{
+  width: 8px;
+  height: 16px;
+  border: 1px solid #000;
+  position: relative;
 }
- .startBody .start .middle .img{
-  margin: 0 auto;
-  margin-top: 2rem;
-  width: 150rpx;
-} 
- 
-.startBody .start .middle .img .cover{
-  width: 0rpx;
-  overflow: hidden;
-  animation: move 1s forwards infinite;
-}   
-
- @keyframes move{
-  to{
-    width: 150rpx;
-  }
-} 
-
-.startBody .start .bottom{
-  text-align: right;
-  margin-right: 20rpx;
-}
-
-.startBody .start .bottom .bottom-top{
-  font-size: 13px;
-  /* margin-bottom: 20rpx; */
-}
-
-.startBody .start .bottom .bottom-right{
-   margin: 20rpx 0rpx 20rpx 0; 
-  /* padding: 1px 3px; */
-  /* border: 1px solid #ccc; */
-  border-radius: 5px;
-  display: inline; 
-  /* padding-bottom: 2px; */
-  /* cursor: pointer; */
+.startBody .start .top .flag :before{
+  /* position: absolute;
+  bottom: 0px;
+  width: 0xp;
+  height: 0px;
+  border-top: 3px solid #000; */
+  /* border-left: 3px solid transparent;
+  border-right: 3px solid transparent; */
 }

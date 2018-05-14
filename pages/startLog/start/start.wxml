@@ -1,23 +1,16 @@
 <!--pages/startLog/start/start.wxml-->
-<common-wrapper>
+
   <view class='startBody'>
-  <view class='start'>
-    <view class='top'>></view>
-    <view class='middle'>
-      <view class='word'>Welcome~</view>  
-      <view class='word'>Have a good day (：</view>
-      <view class='img'>
-        <view class='cover'>
-          <image src='/image/heart.jpg'></image>  
-        </view>
+    <view class='start'>
+      <view class='top'>
+        <!-- <view class='flag'>
+        </view> -->
       </view>
-    </view>
-    <view class='bottom'>
-      <view class='bottom-top'>定制你的专属运动计划</view>
-      <view class=''>
-      <view class='bottom-right'>→</view>
+      <view class='middle'>
+        
+      </view>
+      <view class='bottom'>
+        
       </view>
     </view>
   </view>
-</view>
-</common-wrapper>
