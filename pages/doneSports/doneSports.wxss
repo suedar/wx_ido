@@ -1,0 +1,7 @@
+/* pages/doneSports/doneSports.wxss */
+ .doneSport {
+  width: 100vw;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-image: url('http://oz3on0sof.bkt.clouddn.com/doneBg.jpg');
+}

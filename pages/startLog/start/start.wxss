@@ -31,9 +31,25 @@
   flex-direction: column;
   align-items: center;
 }
-.startBody .start .top .startLog-pos{
+.startBody .start .top .cover{
   position: absolute;
-  left: 0px; 
+  left: 0px;
+  width: 150rpx;
+  height: 0rpx;
+  overflow: hidden;
+  animation: showUp 1s ease-in forwards;
+}
+@keyframes showUp{
+  form{
+    height: 0px;
+  }
+  to{
+    height: 150rpx;
+  }
+}
+.startBody .start .top .startLog-pos{
+  /* position: absolute;
+  left: 0px;  */
 }
 .startBody .start .top .startLog-image{
   width: 60rpx;
@@ -74,6 +90,7 @@ image{
   margin-right: 30rpx;
   margin-bottom: 20rpx;
   height: 25px;
+  animation: swing 1s;  
 }
 .startBody .start .bottom .line{
   /* height: 30px; */
@@ -83,4 +100,30 @@ image{
 }
 .startBody .start .bottom .dis{
   display: inline-block;
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
 }

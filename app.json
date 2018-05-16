@@ -5,7 +5,8 @@
     "pages/loading/loading",
     "pages/startLog/start/start",
     "pages/startLog/commonWrapper/commonWrapper",
-    "pages/displayPage/displayPage"
+    "pages/displayPage/displayPage",
+    "pages/doneSports/doneSports"
   ],
   "window":{
     "backgroundTextStyle":"light",

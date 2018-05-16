@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -49,6 +49,11 @@
 					"name": "displayPage",
 					"pathName": "pages/displayPage/displayPage",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "运动完成",
+					"pathName": "pages/doneSports/doneSports"
 				}
 			]
 		}
