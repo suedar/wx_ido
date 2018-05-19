@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/startLog/start/start",    
     "pages/index/index",
     "pages/logs/logs",
     "pages/loading/loading",
-    "pages/startLog/start/start",
     "pages/startLog/commonWrapper/commonWrapper",
     "pages/displayPage/displayPage",
     "pages/doneSports/doneSports"

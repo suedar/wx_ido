@@ -4,30 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    
   },
   onLoad: function () {
-    wx.login({
-      success: res => {
-        console.log(res)
-        //发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: 'https://wxapi.devoted.net.cn/user/login/' + res.code,
-          method: 'GET',
-          success: (response) => {
-            console.log(response)
-          }
-        })
-      }
-    })
-    wx.getUserInfo({
-      success: (res) => {
-        console.log(res)
-      },
-      fail: res => {
-        console.log(res)
-      }
-    })
+    
   },
   onLaunch: function () {
     // 获取用户信息

@@ -12,7 +12,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    new Promise((resolve, rejecte) => {
+      let needInfo = {};      
+      wx.login({
+        success: res => {
+          //发送 res.code 到后台换取 openId, sessionKey, unionId
+          needInfo.code = res.code
+        },
+        fail: () => {
+          wx.navigateBack({
+            delta: -1
+          })
+        }
+      })
+      wx.getUserInfo({
+        success: (res) => {
+          needInfo.iv = res.iv;
+          needInfo.encryptedData = res.encryptedData;
+        },
+        fail: () => {
+          wx.navigateBack({
+            delta: -1
+          })
+        }
+      })
+      resolve(needInfo)
+    }).then((res)=>{
+      console.log(res)
+      wx.request({
+        url: 'https://wxapi.devoted.net.cn/user/oauth',
+        method: 'POST',
+        data: res,
+        success: (response) => {
+          console.log(response)
+        }
+      })
+    })
+    
   },
 
   /**
