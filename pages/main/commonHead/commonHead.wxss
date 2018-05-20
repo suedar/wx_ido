@@ -1,0 +1,33 @@
+/* pages/main/commonHead/commonHead.wxss */
+.commonHead{
+  padding: 80rpx;
+  width: 60vw;
+  height: 10vh;
+  /* background-color: #000; */
+  /* border: 1px solid #000; */
+}
+.commonHead image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.commonHead .rightSide{
+  display: inline-block;
+  font-size: 10px;
+}
+.commonHead .rightSide .nickName{
+  font-size: 15px;
+  padding-left: 20rpx;  
+}
+.commonHead .rightSide .pre {
+  background: #bd1313;
+  color: #fff;
+  padding: 0 3rpx;
+  margin-right: 10rpx;
+}
+.commonHead .rightSide .nick{
+  color: #aeb1ba;
+}
+.commonHead .rightSide .nick, .commonHead .rightSide .pre{
+  display: inline-block;
+}

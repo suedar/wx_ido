@@ -12,43 +12,82 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    new Promise((resolve, rejecte) => {
-      let needInfo = {};      
-      wx.login({
-        success: res => {
-          //发送 res.code 到后台换取 openId, sessionKey, unionId
-          needInfo.code = res.code
-        },
-        fail: () => {
-          wx.navigateBack({
-            delta: -1
-          })
+    // new Promise((resolve, rejecte) => {
+    //   let needInfo = {};      
+    //   wx.login({
+    //     success: res => {
+    //       //发送 res.code 到后台换取 openId, sessionKey, unionId
+    //       needInfo.code = res.code
+    //     },
+    //     fail: () => {
+    //       wx.navigateBack({
+    //         delta: -1
+    //       })
+    //     }
+    //   })
+    //   wx.getUserInfo({
+    //     success: (res) => {
+    //       needInfo.iv = res.iv;
+    //       needInfo.encryptedData = res.encryptedData;
+    //     },
+    //     fail: () => {
+    //       wx.navigateBack({
+    //         delta: -1
+    //       })
+    //     }
+    //   })
+    //   resolve(needInfo)
+    // }).then((res)=>{
+    //   console.log(res)
+    //   wx.request({
+    //     url: 'https://wxapi.devoted.net.cn/user/oauth',
+    //     method: 'POST',
+    //     data: res,
+    //     success: (response) => {
+    //       console.log(response)
+    //     }
+    //   })
+    // })
+
+    // 出错了 先用假数据
+    let res = {
+        "openId": "oGnrz0GutS1PYDoPKU-BUQ-rj5BI",
+        "pre": "白",
+        "nick": "新手小白", 
+        "nickName": "cookie_🍪",
+        "gender": 2,
+        "language": "zh_CN",
+        "city": "Shantou",
+        "province": "Guangdong",
+        "country": "China",
+        "avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/TVAicR3KQSMc1ibT8slo1R6YrjFZRibqaDuUZiaEKHibI8Er9u9VUUPFr2yg8odykvcWictp24vgulUbufZEZ4p7uwUg/132",
+        "createTime": 1526742468,
+        "watermark": {
+          "timestamp": 1526742468,
+          "appid": "wx4c3e3eebd30ade1f"
         }
-      })
-      wx.getUserInfo({
-        success: (res) => {
-          needInfo.iv = res.iv;
-          needInfo.encryptedData = res.encryptedData;
-        },
-        fail: () => {
-          wx.navigateBack({
-            delta: -1
-          })
-        }
-      })
-      resolve(needInfo)
-    }).then((res)=>{
-      console.log(res)
-      wx.request({
-        url: 'https://wxapi.devoted.net.cn/user/oauth',
-        method: 'POST',
-        data: res,
-        success: (response) => {
-          console.log(response)
-        }
-      })
+    };
+    wx.request({
+      url: 'https://wxapi.devoted.net.cn/sport/hitokoto',
+      success: (res) => {
+        // console.log(res)
+        wx.setStorage({
+          key: 'word',
+          data: res.data.data.hitokoto
+        })
+        // wx.setStorageSync('word', res)        
+      }
     })
-    
+    // 这里要多做一步问询的处理 
+    wx.getWeRunData({
+      success: (res)=>{
+        console.log(res)
+      }
+    })
+    wx.setStorageSync('userData', res)
+    wx.redirectTo({
+      url: '../../main/main/main',
+    })
   },
 
   /**

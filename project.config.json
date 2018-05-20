@@ -55,6 +55,24 @@
 					"name": "运动完成",
 					"pathName": "pages/doneSports/doneSports",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "主页头像",
+					"pathName": "pages/main/commonHead/commonHead",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "主页",
+					"pathName": "pages/main/main/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "点DO",
+					"pathName": "pages/main/clickDO/clickDO",
+					"query": ""
 				}
 			]
 		}

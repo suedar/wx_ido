@@ -1,0 +1,5 @@
+<!--pages/main/clickDO/clickDO.wxml-->
+<view class='clickDo'>
+  <commonHead userData="{{userData}}"></commonHead>
+  <view></view>
+</view>

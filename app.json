@@ -1,6 +1,9 @@
 {
   "pages":[
-    "pages/startLog/start/start",    
+    "pages/startLog/start/start",
+    "pages/main/main/main",
+    "pages/main/commonHead/commonHead",
+    "pages/main/clickDO/clickDO",    
     "pages/index/index",
     "pages/logs/logs",
     "pages/loading/loading",

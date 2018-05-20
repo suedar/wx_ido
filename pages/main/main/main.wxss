@@ -1,0 +1,82 @@
+/* pages/main/main/main.wxss */
+.main .main-middle{
+  width: 100vw;
+   height: 30vh; 
+  margin-top: 10vh;
+  /* line-height: 50vh; */
+}
+.main .main-middle .main-middle-top {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+.main .main-middle .main-middle-top .linkLeft, .main .main-middle .main-middle-top .linkRight {
+  border-top: 1px solid #a6a6a6;
+  width: 30vw;
+}
+.main .main-middle .main-middle-top .linkMiddle{
+  width: 60rpx;
+  text-align: center;
+}
+.main .main-middle .main-middle-top image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.main .main-middle-word {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.main .main-middle .main-middle-buttom {
+  margin-top: 50rpx;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main-middle .main-middle-buttom .linkLeft, .main .main-middle .main-middle-buttom .linkRight {
+  border-top: 1px solid #a6a6a6;
+  width: 10vw;
+}
+.main .main-middle .linkMiddle {
+  /* margin-top: 20rpx; */
+  padding: 0 10rpx;
+  color: #b2b2b2;
+  font-size: 16px;
+}
+.main  .main-buttom {
+   margin-top: 10vh; 
+  float: right;
+ }
+.main .main-buttom view{
+  margin: 30rpx 0px;
+  border: none;
+  width: 200rpx;
+  height: 70rpx;
+  border-radius: none;
+  line-height: 80rpx;
+  text-align: center;
+  box-shadow: 1px 2px 3px #a6a6a6;
+}
+.main .main-buttom view:first-of-type{
+  background-color: rgba(208, 225, 125, 1);
+  /* border: none; */
+}
+.main .main-buttom view:nth-of-type(2){
+  background-color: rgba(255, 223, 37, 1);
+  /* border: none; */
+}
+.main .main-buttom image{
+  margin-top: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.main .main-buttom view:first-of-type image{
+   width: 65rpx;
+  height: 65rpx; 
+}
+.main .main-buttom view:nth-of-type(2) image{
+  margin-left: 10rpx;
+}

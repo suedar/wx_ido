@@ -1,0 +1,25 @@
+<!--pages/main/main/main.wxml-->
+<view class='main'>
+  <commonHead userData="{{userData}}"></commonHead>
+  <view class='main-middle' bindtap='clickDO'>
+    <view class='main-middle-top'>
+      <view class='linkLeft'></view>
+      <view class='linkMiddle'>
+        <image src='/image/icon/diamond.png'></image>
+      </view>
+      <view class='linkRight'></view>
+    </view>
+    <view class='main-middle-word'>{{word}}</view>
+    <view class='main-middle-buttom'>
+      <view class='linkLeft'></view>
+      <view class='linkMiddle'>点击获取 今日目标</view>
+      <view class='linkRight'></view>
+    </view>
+  </view>
+  <view class='main-buttom'>
+    <view>
+      <image src='/image/icon/foot.png'></image>
+    </view>
+    <view> <image src='/image/icon/link.png'></image></view>
+  </view>
+</view>
