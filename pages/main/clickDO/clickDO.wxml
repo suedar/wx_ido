@@ -1,5 +1,10 @@
 <!--pages/main/clickDO/clickDO.wxml-->
 <view class='clickDo'>
   <commonHead userData="{{userData}}"></commonHead>
-  <view></view>
+  <view class='clickDo-footstep'>
+    <view class='clickDo-leftRight'></view>
+    <view class='clickDo-middle'>
+      <view class=''></view>
+    </view>
+  </view>
 </view>

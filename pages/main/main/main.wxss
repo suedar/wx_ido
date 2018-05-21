@@ -46,17 +46,17 @@
   color: #b2b2b2;
   font-size: 16px;
 }
-.main  .main-buttom {
+.main .main-buttom {
    margin-top: 10vh; 
   float: right;
  }
 .main .main-buttom view{
-  margin: 30rpx 0px;
+  margin: 40rpx 0px;
   border: none;
   width: 200rpx;
-  height: 70rpx;
+  height: 55rpx;
   border-radius: none;
-  line-height: 80rpx;
+  line-height: 70rpx;
   text-align: center;
   box-shadow: 1px 2px 3px #a6a6a6;
 }
@@ -69,13 +69,13 @@
   /* border: none; */
 }
 .main .main-buttom image{
-  margin-top: 10rpx;
-  width: 60rpx;
-  height: 60rpx;
+  /* margin-top: 5rpx; */
+  width: 40rpx;
+  height: 40rpx;
 }
 .main .main-buttom view:first-of-type image{
-   width: 65rpx;
-  height: 65rpx; 
+   width: 45rpx;
+  height: 45rpx; 
 }
 .main .main-buttom view:nth-of-type(2) image{
   margin-left: 10rpx;
