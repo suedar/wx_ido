@@ -79,18 +79,6 @@ Page({
       }
     })
     // 这里要多做一步问询的处理 
-    wx.login({
-      success: res => {
-        console.log('wx.login: ')
-        console.log(res)
-      }
-    })
-    wx.getUserInfo({
-      success: (res) => {
-        console.log('wx.getUserInfo: ')
-        console.log(res)        
-      }
-    })
     wx.getWeRunData({
       success: (res) => {
         console.log('wx.getWeRunData: ')

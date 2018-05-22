@@ -4,7 +4,14 @@
   <view class='clickDo-footstep'>
     <view class='clickDo-leftRight'></view>
     <view class='clickDo-middle'>
-      <view class=''></view>
+      <view class='letter'>{{letter}}</view>
+      <view class='step'>步</view>
+    </view>
+    <view class='clickDo-buttom'>
+      <view class='line'></view>
+      <view class='word'>Do</view>  
+      <view class='line'></view>
+      <view class='buttomWord'>从Do开始</view>        
     </view>
   </view>
 </view>

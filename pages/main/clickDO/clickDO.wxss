@@ -1,1 +1,21 @@
 /* pages/main/clickDO/clickDO.wxss */
+.clickDo{
+  /* overflow: hidden; */
+}
+.clickDo .clickDo-footstep {
+  padding: 30rpx;
+  width: 80vw;
+  height: 30vh;
+  margin: auto;
+  box-shadow: 14rpx 14rpx 30rpx #cccccc;
+  margin-top: 10vh;
+}
+.clickDo .clickDo-footstep .clickDo-leftRight{
+  /* margin: 30rpx 0px 0rpx 30rpx; */
+  /* margin-top: 30rpx; */
+  /* overflow: hidden; */
+  width: 40rpx;
+  height: 40rpx;
+  border-top: 1px solid #929292;
+  border-left: 1px solid #929292;
+}
