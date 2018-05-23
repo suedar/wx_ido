@@ -26,7 +26,7 @@ Page({
               console.log(needInfo)
               wx.request({
                 url: 'https://wxapi.devoted.net.cn/user/oauth',
-                method: 'GET',
+                method: 'POST',
                 data: needInfo,
                 success: (response) => {
                   console.log(response)

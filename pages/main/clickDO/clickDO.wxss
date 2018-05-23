@@ -132,3 +132,25 @@
   }
 }
 
+.clickDo-calorie{
+  margin-top: 5vh;
+}
+.clickDo-calorie .predict {
+  color: #fff;
+  width: 4rem;
+  background: #000;
+  padding: 5rpx;
+  padding-right: 0px;
+  position: relative;
+}
+.clickDo-calorie .predict::after {
+  position: absolute;
+  content: '';
+   /* right: 35rpx;  */
+    top: 0rpx;  
+  width: 0px;
+  height: 0px;
+  border-top: 1.63rem solid #000;
+   border-right: 1rem solid transparent; 
+  /* borrbo */
+}
