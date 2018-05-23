@@ -1,7 +1,5 @@
 /* pages/main/clickDO/clickDO.wxss */
-.clickDo{
-  /* overflow: hidden; */
-}
+
 .clickDo .clickDo-footstep {
   padding: 30rpx;
   width: 80vw;
@@ -9,6 +7,7 @@
   margin: auto;
   box-shadow: 14rpx 14rpx 30rpx #cccccc;
   margin-top: 10vh;
+  position: relative;
 }
 .clickDo .clickDo-footstep .clickDo-leftRight{
   /* margin: 30rpx 0px 0rpx 30rpx; */
@@ -19,3 +18,117 @@
   border-top: 1px solid #929292;
   border-left: 1px solid #929292;
 }
+.clickDo .clickDo-footstep .clickDo-middle{
+  width: 80%;
+  /* display: inline-block; */
+  /* height: 5vh; */
+  margin: 0 auto;
+  margin-top: 6vh;  
+  text-align: center;
+}
+.clickDo .clickDo-footstep .clickDo-middle .letter{
+  font-family: 'STXinwei';
+  padding-right: 10rpx;
+  font-size: 50px;
+   display: inline-block;
+}
+.clickDo .clickDo-footstep::before {
+  position: absolute;
+  content: '';
+  right: 30rpx;
+  bottom: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-bottom: 1px solid #929292;
+  border-right: 1px solid #929292;
+}
+.clickDo .clickDo-footstep .clickDo-middle .step {
+  display: inline-block;
+}
+.clickDo .clickDo-footstep .clickDo-buttom {
+  position: absolute;
+  bottom:  50rpx;
+  right: 70rpx;
+  text-align: center;
+}
+.clickDo .clickDo-footstep .clickDo-buttom .line {
+  width: 50rpx;
+  border-top: 1px solid #929292;
+  /* margin: 0 auto; */
+  animation: fadeInLeft 1s;
+  margin-left: 23rpx;
+}
+ .clickDo .clickDo-footstep .clickDo-buttom .line:nth-of-type(1) {
+  animation: fadeInRight 1s;
+} 
+/* .clickDo .clickDo-footstep .clickDo-buttom .line:nth-of-type(2) {
+  animation: fadeInLeft 1s;
+} */
+.clickDo .clickDo-footstep .clickDo-buttom .word{
+  padding-left: 10rpx;
+  margin: 3rpx 0;
+}
+.clickDo .clickDo-footstep .clickDo-buttom .buttomWord {
+  margin-top: 3rpx;
+  font-size: 10px;
+  animation: tada 1s 1s;
+}
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+

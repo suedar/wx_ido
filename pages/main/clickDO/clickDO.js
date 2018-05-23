@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    letter: '3456'
+    letter: '3456',
+    foodImage: 'fries',
+    foodNumber: 3,
+    calorieData: 225
   },
   // 做不了 小程序采用一次性渲染模式
   // rollData: function(realData, index = 0){

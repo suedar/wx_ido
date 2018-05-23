@@ -14,4 +14,19 @@
       <view class='buttomWord'>从Do开始</view>        
     </view>
   </view>
+  <view class='clickDo-calorie'>
+    <view class='predict'>预计消耗</view>
+    <view class='calorie-transfer'>
+      <view class='fire'>
+        <image src='/image/icon/fire.png'></image>
+      </view>
+      <view class='calorieData'>{{calorieData}}</view>
+      <view class='unit'>kcal</view>
+      <view class='about'>≈</view>
+      <view class='foodNumber'>{{foodNumber}}</view>
+      <view class='foodImage'>
+        <image src='/image/icon/{{foodImage}}.png'></image>
+      </view>
+    </view>
+  </view>
 </view>
