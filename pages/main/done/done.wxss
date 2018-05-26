@@ -1,0 +1,116 @@
+/* pages/main/done/done.wxss */
+.clickDo-done .dialog {
+  width: 80vw;
+   height: 65vh; 
+  background-size: 100% 100%;
+  background-image: url('http://oz3on0sof.bkt.clouddn.com/doneBg.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.clickDo-done .dialog .finish {
+  padding-top: 6vh;
+  font-weight: bold;
+}
+.clickDo-done .dialog .today {
+  width: 80%;
+  position: relative;
+  height: 25vh;
+}
+.clickDo-done .dialog .today .head {
+  color: #bdb4ac;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+.clickDo-done .dialog .today .head::before {
+  position: absolute;
+  content: '';
+  /* text-align: center; */
+  margin: 0 5%;
+  top: 1rem;
+  left: 0px;
+  width: 90%;
+  border-top: .3px solid #bdb4ac;
+}
+.clickDo-done .dialog .today::after {
+  position: absolute;
+  content: '';
+  margin: 0 5%;
+  margin-top: 2vh;
+  bottom: 0px;
+  left: 0px;
+  width: 90%;
+  border-top: .3px solid #bdb4ac;
+}
+.clickDo-done .dialog .today .content view {
+  display: inline-block;
+}
+.clickDo-done .dialog .today .content {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 4vh;
+  justify-content: space-between;
+  align-items: center;
+}
+ /* 这样写有问题 */
+.clickDo-done .dialog .today .content:nth-of-type(2n) {
+  margin-top: 5vh;
+}
+.clickDo-done .dialog .today .content view:first-of-type {
+  font-size: 15px;
+  font-weight: 700;
+  color: #bdb4ac;  
+  /* margin-bottom: 3vh; */
+}
+.clickDo-done .dialog .today .content view:nth-of-type(2) {
+  color: #fff;
+  font-weight: bold;
+  /* margin-bottom: 3vh; */
+}
+.clickDo-done .dialog .today .content .animate {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+.clickDo-done .dialog .today .content .foot {
+  animation: fadeIn .5s .5s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+ .clickDo-done .dialog .word {
+   font-size: 16px;
+   font-weight: bold;
+ }
+ .clickDo-done .dialog .card {
+   border: 1px solid #fff;
+   width: 80rpx;
+   /* ma-left: 10rpx; */
+   margin-right: 10rpx;
+   height: 20rpx;
+   padding: 5px 10px;
+   transform: skewX(-40deg);
+   margin-bottom: 3vh;
+   position: relative;
+ }
+  .clickDo-done .dialog .card::after {
+    position: absolute;
+    content: '打卡';
+    top: 0px;
+    font-size: 15px;
+    padding-left: 10rpx;
+    transform: skewX(40deg);
+    text-align: center;
+    /* left: 10rpx; */
+  }

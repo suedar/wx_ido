@@ -61,7 +61,7 @@ Page({
    */
   onLoad: function (options) {
     let userData = wx.getStorageSync('userData')
-    // console.log(userData)
+    console.log(userData)
     this.setData({
       userData
     })

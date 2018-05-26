@@ -12,6 +12,7 @@
         </feMerge>
     </filter>
 </svg>          -->
+  <commonBlur></commonBlur>
   <commonHead userData="{{userData}}"></commonHead>
   <view class='clickDo-footstep'>
     <view class='clickDo-leftRight'></view>
@@ -27,7 +28,7 @@
     </view>
   </view>
   <view class='clickDo-calorie'>
-    <view class='predict'>预计消耗</view>
+    <view class='predict'></view>
     <view class='calorie-transfer'>
       <view class='fire'>
         <image src='/image/icon/fire.png'></image>
@@ -41,4 +42,18 @@
       </view>
     </view>
   </view>
+  <view class='clickDo-pending'>
+    <view class='pending'></view>   
+    <view class='loading-line'>
+      <percent left="20"></percent>
+      <percent num="60" left="50"></percent>
+      <percent top="32" rotate="true" num="50" left="40"></percent>
+      <percent top="32" rotate="true" num="100" left="86"></percent>
+      <view class='border'>
+        <view class='content'>
+        </view>
+      </view>
+    </view> 
+  </view>
+  <view class='clickDo-button'>3333</view>
 </view>

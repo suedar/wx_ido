@@ -1,0 +1,14 @@
+<!--pages/main/unDone/unDone.wxml-->
+<view class='unDone'>
+    <commonBlur>
+      <view class='dialog'>
+        什么鬼，目标没完成？？
+        <view class='padding'>
+          难过到我对话框都黑了        
+        </view>
+        <view class='lightning'>
+          <image src="/image/icon/lightning.png"></image>
+        </view>
+      </view>
+    </commonBlur>
+</view>

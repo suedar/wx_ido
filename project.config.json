@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -73,6 +73,23 @@
 					"name": "点DO",
 					"pathName": "pages/main/clickDO/clickDO",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "目标未完成",
+					"pathName": "pages/main/unDone/unDone",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "目标完成",
+					"pathName": "pages/main/done/done",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "打卡完成",
+					"pathName": "pages/main/finishCard/finishCard"
 				}
 			]
 		}

@@ -1,0 +1,36 @@
+/* pages/main/unDone/unDone.wxss */
+.unDone .dialog {
+  width: 56%;
+  position: relative;
+  /* height: 3vh; */
+  /* text-align: center; */
+  background-color: #343333;
+  color: #fff;
+  padding: 30rpx 40rpx;
+  border-radius: 10px;
+}
+ /* ???????? */
+  .unDone .dialog::before {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: -15rpx;
+   top: 50rpx; 
+  /* bottom: 0px; */
+  content: '';
+   border-right: 10px solid #343333;
+  border-top: 10px solid transparent; 
+   border-bottom: 10px solid transparent; 
+}  
+.unDone .dialog .padding {
+  padding-right: 40rpx;
+}
+.lightning {
+  position: absolute;
+  right: 10rpx;
+  bottom: 5rpx;
+}
+.lightning image {
+  width: 55rpx;
+  height: 55rpx;
+}

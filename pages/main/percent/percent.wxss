@@ -1,0 +1,12 @@
+/* pages/main/percent/percent.wxss */
+.clickDO-percent {
+  width: 90rpx;
+  text-align: center;
+  position: absolute;
+  font-size: 14px;
+  top: -38px;
+   left: 20%; 
+   transform-origin:100% 100%;
+    /* transform: rotateX(180deg) rotateY(180deg);  */
+    /* transform: ;  */
+}

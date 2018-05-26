@@ -14,14 +14,16 @@ Page({
   onLoad: function (options) {
     // new Promise((resolve, rejecte) => {
       let needInfo = {};      
+      let openIdInfo = {};
       wx.login({
         success: res => {
           console.log(res)
           //发送 res.code 到后台换取 openId, sessionKey, unionId
-          needInfo.code = res.code
+          needInfo.code = res.code;
+          openIdInfo.code = res.code;
           wx.getUserInfo({
             success: (res) => {
-              console.log(res)
+              // console.log(res)
               needInfo.iv = res.iv;
               needInfo.encryptedData = res.encryptedData;
               console.log(needInfo)
@@ -31,10 +33,12 @@ Page({
                 data: needInfo,
                 success: (response) => {
                   console.log(response)
-                  wx.setStorageSync('userData', response)                  
+                  // wx.setStorageSync('userData', response)                  
                 },
                 fail: ()=>{
-
+                  wx.request({
+                    url: '',
+                  })
                 }
               })
             },
@@ -90,11 +94,12 @@ Page({
     //       "appid": "wx4c3e3eebd30ade1f"
     //     }
     // };
+    // wx.setStorageSync('userData', res)                  
 
     wx.request({
       url: 'https://wxapi.devoted.net.cn/sport/hitokoto',
       success: (res) => {
-        // console.log(res)
+        console.log(res)
         wx.setStorage({
           key: 'word',
           data: res.data.data.hitokoto
@@ -105,7 +110,9 @@ Page({
 
     // 这里要多做一步问询的处理 
     
-    
+    wx.redirectTo({
+        url: '../../main/main/main',
+      })
   },
 
   /**

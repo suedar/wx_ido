@@ -1,0 +1,21 @@
+<!--pages/main/done/done.wxml-->
+<view class='clickDo-done'>
+  <commonBlur>
+    <view class='dialog'>
+      <view class='finish'>目标完成  :)</view>
+      <view class='today'>
+        <view class='head'>今日成果</view>
+        <view class='content'>
+          <view class='content-head'>消耗热量</view>
+          <view class='animate'>{{calorie ? calorie : 255}}大卡</view>
+        </view>
+        <view class='content'>
+          <view class='content-head'>一共走了</view>
+          <view class='animate foot'>{{footstep ? footstep : 6666}}步</view>
+        </view>
+      </view>
+      <view class='word'>bingo!元气满满的一天</view>
+      <view class='card' ></view>
+    </view>
+  </commonBlur>
+</view>

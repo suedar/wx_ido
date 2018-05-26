@@ -1,12 +1,16 @@
 /* pages/main/clickDO/clickDO.wxss */
 
+.clickDo {
+   filter: blur(3px);
+  position: relative;
+}
 .clickDo .clickDo-footstep {
   padding: 30rpx;
   width: 80vw;
   height: 30vh;
   margin: auto;
   box-shadow: 14rpx 14rpx 30rpx #cccccc;
-  margin-top: 10vh;
+  margin-top: 4vh;
   position: relative;
 }
 .clickDo .clickDo-footstep .clickDo-leftRight{
@@ -69,7 +73,7 @@
   margin: 3rpx 0;
 }
 .clickDo .clickDo-footstep .clickDo-buttom .buttomWord {
-  margin-top: 3rpx;
+  margin-top: 5rpx;
   font-size: 10px;
   animation: tada 1s 1s;
 }
@@ -133,28 +137,125 @@
 }
 
 .clickDo-calorie{
-  margin-top: 5vh;
+  margin-top: 10vh;
 }
 .clickDo-calorie .predict {
-  color: #fff;
+   /* color: #fff;  */
   width: 4rem;
-  background: #000;
+  /* background: #000;
   padding: 5rpx;
   padding-right: 0px;
   position: relative;
-  filter: drop-shadow(1px, 2px, 3px, #000);
-  /* box-shadow: 1px 2px 3px #000; */
+  filter: drop-shadow(1px, 2px, 3px, #000); */
+   /* box-shadow: 1px 2px 3px #cdcdcd;  */
+  height: 0px;
+   /* line-height: -1rem;  */
+  border-top: 1.5rem solid #000;
+  border-right: 1rem solid transparent;
+  position: relative;
+  /* filter: drop-shadow(30px, 2px, 3px, #000); */
 }
 .clickDo-calorie .predict::after {
   position: absolute;
-  content: '';
-   /* right: 35rpx;  */
-    top: 0rpx;  
-  width: 0px;
+  content: '预计消耗';
+  color: white;   
+   /* left: 0px;  */
+     top: -55rpx;
+}
+.calorie-transfer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 7vh;
+  font-family: 'STXihei';
+}
+.calorie-transfer .fire image{
+  width: 50rpx;
+  height: 50rpx;
+}
+image{
+  width:100rpx;
+  height: 100rpx;
+}
+.calorie-transfer .unit{
+  font-style: italic;
+}
+.clickDo-calorie .about{
+  font-size: 30px;
+  font-family: 'STXinwei';
+  color: #999999;
+}
+.clickDo-calorie .foodNumber{
+  font-family: 'STXinwei';
+  font-size: 35px;
+}
+.clickDo-calorie .foodImage {
+  /* width: 180rpx; */
+}
+.clickDo-calorie .foodImage image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.clickDo-pending {
+  margin-top: 7vh;
+}
+.clickDo-pending .pending {
+  /* text-align: center; */
+  /* color: #fff; */
+  /* width: 3rem; */
+  /* background: #99cccc; */
   height: 0px;
-  border-top: 1.59rem solid #000;
-   border-right: 1rem solid transparent; 
+  width: 3rem;
+  border-top: 1.5rem solid #99cccc;
+  border-right: 1rem solid transparent;
+  position: relative;
+  /* filter: drop-shadow(1px, 2px, 3px, #000); */
   /* box-shadow: 1px 2px 3px #000; */
-   
-  /* borrbo */
+}
+.clickDo-pending .pending::after {
+  position: absolute;
+  content: '进行中';
+  color: white;   
+   /* left: 0px;  */
+     /* top: -1.25rem;   */
+     top: -55rpx;  
+     
+}
+.clickDo-pending .loading-line {
+  width: 70%;
+  height: 5vh;
+  /* line-height: 5vh; */
+  margin: 0 auto;
+  margin-top: 10vh;
+   border: 2px dashed #929292; 
+  /* background-image: linear-gradient(to right, #ccc 0%, #ccc 50%, transparent 50%);
+  background-size: 8px 1px;
+  background-repeat: repeat-x; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+}
+
+.clickDo-pending .border {
+  width: 90%;
+  margin: 0 auto;
+  height: 3vh;
+     /* line-height: 20;    */
+  border-radius: 5px;
+  border: 1px solid #929292;
+  overflow: hidden;
+}
+
+.clickDo-pending .content {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ebbd4d, #ffffa5);
+  transform: translateX(-20%);
+}
+.clickDo-button {
+  margin-top: 10vh;
 }

@@ -1,0 +1,13 @@
+<!--pages/main/percent/percent.wxml-->
+<view class='clickDO-percent'
+style="left: {{left ? left : 20}}%; top:{{top ? top : -38}}px" >
+  <view class='number' wx:if="{{!rotate}}">
+    {{num ? num : 30}}%
+  </view>
+  <view class='line'>
+    |
+  </view>
+  <view class='number' wx:if="{{rotate}}">
+    {{num ? num : 30}}%
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/main/commonBlur/commonBlur.wxml-->
+<view class='main-blur'>
+  <slot></slot>
+</view>

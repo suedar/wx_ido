@@ -1,0 +1,15 @@
+<!--pages/main/finishCard/finishCard.wxml-->
+<!--pages/main/done/done.wxml-->
+<view class='clickDo-finishCard'>
+  <commonBlur>
+    <view class='daka'>
+      <view class='image'>
+        <image src='/image/daka.jpg'></image>
+        <view class='date'>{{dakaDate? dakaDate: 15}}天</view>
+      </view>
+      <view class=''>打卡完成</view>
+      <view class=''>{{date}}</view>
+      <view class='no'>x</view>
+    </view>
+  </commonBlur>
+</view>

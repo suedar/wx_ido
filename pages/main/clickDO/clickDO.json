@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "commonHead": "../commonHead/commonHead"
+    "commonHead": "../commonHead/commonHead",
+    "percent": "../percent/percent",
+    "commonBlur": "../commonBlur/commonBlur"
   }
 }
