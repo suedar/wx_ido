@@ -111,7 +111,7 @@ Page({
     // 这里要多做一步问询的处理 
     
     wx.redirectTo({
-        url: '../../main/main/main',
+        // url: '../../main/main/main',
       })
   },
 

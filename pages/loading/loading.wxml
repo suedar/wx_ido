@@ -1,7 +1,18 @@
 <!--pages/loading/loading.wxml-->
-<view class='loadingPage'>
-  <view class='loadingImage'>
-    <view class='image'></view>
-    <text class='center'>Loading<text class='dotting'></text></text>
-  </view>
+<view class='ido-loading'>
+  <commonBlur>
+    <view class='loadingPage'>
+          <view class='loadingImage'>
+              <view class='image'></view>
+              <text class='center'>Loading<text class='dotting'></text></text>
+        </view>
+        <view class='bottom'>
+          <view class='image'>
+            <image src='/image/loading.PNG'></image>
+          </view>
+          <view class='word'>定制你的运动计划</view>
+        </view>
+    </view>
+  </commonBlur>
+
 </view>

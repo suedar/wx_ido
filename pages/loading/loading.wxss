@@ -1,18 +1,21 @@
 /* pages/loading/loading.wxss */
+
 .loadingPage{
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-  max-width: 100vw;
+  height: 80vh;
+  width: 80vw;
+  border: 1px solid #9f9f9f;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin-top: 5vh; */
 }
 .loadingPage .loadingImage{
   width: 100px;
   height: 150px;
   /* margin: 0 auto; */
   text-align: center;
+  margin-top: 8vh;
 }
 .loadingPage .loadingImage .image{
   width: 100px;
@@ -33,4 +36,25 @@
     25% { box-shadow: none; }                                  /* 0个点 */
     50% { box-shadow: 2px 0 currentColor; }                    /* 1个点 */
     75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor;  /* 2个点 */ }
+    100% { box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor;  /* 2个点 */ }
+}
+
+.ido-loading .bottom {
+  display: flex;
+  align-items: center;
+}
+.ido-loading .bottom .image {
+  border: 1px solid #9f9f9f;
+  width: 80rpx;
+  height: 80rpx;
+}
+.ido-loading .bottom image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.ido-loading .word {
+  margin-left: 30rpx;
+  border-left: 1px solid #9f9f9f;
+  padding-left: 30rpx;
+  color: #  4b4c4c; 
 }

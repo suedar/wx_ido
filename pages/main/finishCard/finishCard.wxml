@@ -5,10 +5,11 @@
     <view class='daka'>
       <view class='image'>
         <image src='/image/daka.jpg'></image>
-        <view class='date'>{{dakaDate? dakaDate: 15}}天</view>
+        <view class='date'>{{dakaDate? dakaDate: 15}}
+        <view class='day'>天</view></view>
       </view>
-      <view class=''>打卡完成</view>
-      <view class=''>{{date}}</view>
+      <view class='word'>打卡完成</view>
+      <view class='word'>{{date}}</view>
       <view class='no'>x</view>
     </view>
   </commonBlur>

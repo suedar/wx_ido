@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
@@ -89,7 +89,8 @@
 				{
 					"id": -1,
 					"name": "打卡完成",
-					"pathName": "pages/main/finishCard/finishCard"
+					"pathName": "pages/main/finishCard/finishCard",
+					"query": ""
 				}
 			]
 		}

@@ -1,7 +1,7 @@
 /* pages/main/clickDO/clickDO.wxss */
 
 .clickDo {
-   filter: blur(3px);
+   /* filter: blur(3px); */
   position: relative;
 }
 .clickDo .clickDo-footstep {

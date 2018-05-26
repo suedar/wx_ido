@@ -1,1 +1,57 @@
 /* pages/main/finishCard/finishCard.wxss */
+.clickDo-finishCard .daka {
+  width: 90%;
+  height: 87vh;
+  border: 1px solid #7d7d7d;
+  position: relative;
+}
+.clickDo-finishCard .daka .image {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  margin-bottom: 20px;
+}
+.clickDo-finishCard .daka image {
+  width: 100%;
+  height: 100%;
+}
+.clickDo-finishCard .daka .image .date {
+  position: absolute;
+  color: white;
+  bottom: 2rem;
+  left: 2rem;
+  display: inline-block;
+  width: 100rpx;
+  white-space: nowrap;
+  font-size: 25px;
+  font-weight: bold;
+}
+.clickDo-finishCard .daka .image .date .day {
+  display: inline-block;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: normal;
+}
+.clickDo-finishCard .daka .word {
+  font-size: 18px;
+  margin-left: 2rem;
+}
+.clickDo-finishCard .daka .no {
+  /* text-align: right; */
+  /* display: flex;
+  justify-content: flex-end; */
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  /* padding: 10px; */
+  color: #fe4646;
+  border: 1px solid #7d7d7d;
+  border-top-left-radius: 2rem;
+  width: 15px;
+  padding: 3px 5px;
+  text-align: right;
+  font-size: 20px;
+  /* width:  */
+  /* background: #000; */
+  /* width: 30rpx;  */
+}
