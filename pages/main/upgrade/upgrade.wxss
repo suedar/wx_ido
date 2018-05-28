@@ -1,0 +1,71 @@
+/* pages/main/upgrade/upgrade.wxss */
+.ido-select {
+  width: 80vw;
+  height: 30vh;
+  border: 1px solid #868686;
+  box-shadow: 3px 4px 5px #cccccc;
+}
+.ido-select .icon {
+  padding: 15px 0 0 10px;
+  position: relative;
+}
+.ido-select .icon::before {
+  position: absolute;
+  content: 'd I o';
+  left: 21px;
+  top: 20px;
+  color: #fff;
+  font-size: 12px;
+  border-bottom: 1px solid #fff;
+}
+.ido-select .icon image {
+  width: 100rpx;
+  height: 80rpx;
+  /* height: auto; */
+}
+.ido-select .content {
+  padding-left: 55px;
+  color: #f35960;
+  font-size: 15px;
+}
+.ido-select .content .pad-left {
+  padding-left: 0rem;
+}
+.ido-select .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .7rem;
+}
+.ido-select .bottom .front {
+  width: 3.5rem;   
+  height: 0px;
+  border-bottom: 1.5rem solid #f35960;
+  border-right: 1rem solid transparent;
+  position: relative;
+  /* box-shadow: 1px 2px 3px #868686; */
+}
+.ido-select .bottom .end {
+  width: 3.5rem;   
+  height: 0px;
+  border-bottom: 1.5rem solid #f35960;
+  border-left: 1rem solid transparent;
+  position: relative;
+}
+.ido-select .bottom .front::after{
+  position: absolute;
+  font-size: 14px;
+   left: 6px; 
+   top: 4px;
+    /* bottom: -50px;   */
+  color: #fff;
+  content: '加大强度';
+}
+.ido-select .bottom .end::after{
+  position: absolute;
+  font-size: 14px;
+   right: 6px; 
+   top: 4px;
+    /* bottom: -50px;   */
+  color: #fff;
+  content: '保持之前';
+}

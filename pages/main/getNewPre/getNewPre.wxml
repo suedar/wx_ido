@@ -1,0 +1,26 @@
+<!--pages/main/getNewPre/getNewPre.wxml-->
+<view class='clickDo-getNewPre'>
+  <commonBlur>
+    <view class='newPC'>
+      <view class='head'>获得了新身份</view>
+      <view class='middle'>
+        <view class='nickname'>{{nickname}}</view>
+        <view class='divide-line'>
+          <!-- <view class='image'> -->
+            <image src='/image/left.png'></image>          
+          <!-- </view> -->
+          <view class='satr'>★</view>
+          <!-- <view class='image'> -->
+            <image src='/image/right.png'></image>          
+          <!-- </view> -->
+        </view>
+        <view class='content'>
+          <view>见过花开 见过树绿</view>
+          <view>你认真的样子让我心动</view>
+          <view>再接再厉 加油！</view>
+        </view>
+      </view>
+      <view class='exit'>√</view>
+    </view>
+  </commonBlur>
+</view>

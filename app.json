@@ -8,12 +8,13 @@
     "pages/main/unDone/unDone",
     "pages/main/commonBlur/commonBlur",
     "pages/main/done/done",
-    "pages/main/finishCard/finishCard",    
-    "pages/index/index",
+    "pages/main/finishCard/finishCard",
+    "pages/main/getNewPre/getNewPre",
+    "pages/main/upgrade/upgrade",    
+    "pages/history/history",
     "pages/loading/loading",
-    "pages/startLog/commonWrapper/commonWrapper",
-    "pages/displayPage/displayPage",
-    "pages/doneSports/doneSports"
+    "pages/headInfo/headInfo",
+    "pages/startLog/commonWrapper/commonWrapper"
   ],
   "window":{
     "backgroundTextStyle":"light",

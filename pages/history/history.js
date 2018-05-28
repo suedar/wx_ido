@@ -1,4 +1,4 @@
-// pages/doneSports/doneSports.js
+// pages/history/history.js
 Page({
 
   /**

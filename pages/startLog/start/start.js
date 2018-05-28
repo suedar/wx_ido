@@ -1,4 +1,5 @@
 // pages/startLog/start/start.js
+import { getOpenId, setLevel} from '../../../utils/func';
 Page({
 
   /**
@@ -12,18 +13,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // new Promise((resolve, rejecte) => {
+    new Promise((resolve, reject) => {
       let needInfo = {};      
-      let openIdInfo = {};
+      let openIdInfo = '';
       wx.login({
         success: res => {
-          console.log(res)
-          //发送 res.code 到后台换取 openId, sessionKey, unionId
           needInfo.code = res.code;
-          openIdInfo.code = res.code;
+          openIdInfo = res.code;
           wx.getUserInfo({
             success: (res) => {
-              // console.log(res)
               needInfo.iv = res.iv;
               needInfo.encryptedData = res.encryptedData;
               console.log(needInfo)
@@ -32,87 +30,58 @@ Page({
                 method: 'POST',
                 data: needInfo,
                 success: (response) => {
-                  console.log(response)
-                  // wx.setStorageSync('userData', response)                  
-                },
-                fail: ()=>{
-                  wx.request({
-                    url: '',
-                  })
+                  if (response.statusCode !== 500) {
+                    wx.setStorageSync('userData', response.data.data) 
+                    wx.setStorageSync('openId', response.data.data.openId)
+                    resolve();
+                  }
                 }
-              })
-            },
-            fail: () => {
-              wx.navigateBack({
-                delta: -1
               })
             }
           })
-        },
-        fail: () => {
-          wx.navigateBack({
-            delta: -1
-          })
         }
       })
-      // wx.redirectTo({
-      //   url: '../../main/main/main',
-      // })
-    //   resolve(needInfo)
-    // }).then((res)=>{
-      // console.log(res)
-      // wx.request({
-      //   url: 'https://wxapi.devoted.net.cn/user/oauth',
-      //   method: 'POST',
-      //   data: needInfo,
-      //   success: (response) => {
-      //     console.log(response)
-      //   }
-      // })
-    // })
-  // wx.getWeRunData({
-  //     success: (res) => {
-  //       console.log('wx.getWeRunData: ')
-  //       console.log(res)        
-  //     }
-  //   })
-    // 出错了 先用假数据
-    // let res = {
-    //     "openId": "oGnrz0GutS1PYDoPKU-BUQ-rj5BI",
-    //     "pre": "白",
-    //     "nick": "新手小白", 
-    //     "nickName": "cookie_🍪",
-    //     "gender": 2,
-    //     "language": "zh_CN",
-    //     "city": "Shantou",
-    //     "province": "Guangdong",
-    //     "country": "China",
-    //     "avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/TVAicR3KQSMc1ibT8slo1R6YrjFZRibqaDuUZiaEKHibI8Er9u9VUUPFr2yg8odykvcWictp24vgulUbufZEZ4p7uwUg/132",
-    //     "createTime": 1526742468,
-    //     "watermark": {
-    //       "timestamp": 1526742468,
-    //       "appid": "wx4c3e3eebd30ade1f"
-    //     }
-    // };
-    // wx.setStorageSync('userData', res)                  
-
-    wx.request({
-      url: 'https://wxapi.devoted.net.cn/sport/hitokoto',
-      success: (res) => {
-        console.log(res)
-        wx.setStorage({
-          key: 'word',
-          data: res.data.data.hitokoto
-        })
-        // wx.setStorageSync('word', res)        
-      }
+    }).then(()=> {
+      let openId = getOpenId();
+      console.log(openId)
+      wx.request({
+        url: 'https://wxapi.devoted.net.cn/user/stepInfo',
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-from-urlencoded' // 默认值
+        },
+        data: {openId: openId},
+        success: (res) => {
+          console.log(res)
+        }
+      })      
+    }).then(() => {
+      wx.request({
+        url: 'https://wxapi.devoted.net.cn/sport/hitokoto',
+        success: (res) => {
+          console.log(res)
+          wx.setStorage({
+            key: 'word',
+            data: res.data.data.hitokoto
+          })
+          // wx.setStorageSync('word', res)
+        }
+      })
+    }).then(() => {
+        wx.redirectTo({
+        url: '../../main/main/main',
+      })
+    }).catch(() => {
+      wx.navigateBack({
+        delta: -1
+      })
     })
 
     // 这里要多做一步问询的处理 
     
-    wx.redirectTo({
-        // url: '../../main/main/main',
-      })
+    // wx.redirectTo({
+    //     url: '../../main/main/main',
+    //   })
   },
 
   /**

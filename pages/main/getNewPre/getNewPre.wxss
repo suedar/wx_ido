@@ -1,0 +1,59 @@
+/* pages/main/getNewPre/getNewPre.wxss */
+
+.newPC {
+  background: url('http://oz3on0sof.bkt.clouddn.com/ido1.png');
+  box-shadow: 2px 3px 5px  #e0e0e0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 45vh;
+  padding: 10vh 0;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.newPC .head {
+  color: #999999;
+  margin-top: 5vh;
+  font-size: 20px;
+}
+.newPC .middle {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.newPC .middle .divide-line {
+  display: flex;
+  width: 80%;
+    justify-content: space-between;  
+    align-items: center; 
+}
+.newPC .middle .divide-line .satr {
+  padding: 0 10px;
+  vertical-align: text-top;
+}
+.newPC .middle .nickname {
+  color: #cc0033;
+  font-weight: bold;
+}
+.newPC .middle .content {
+  color: #cecdd0;
+  font-size: 15px;
+  margin-left: 5vw;
+}
+.newPC .exit {
+  color: #cc0033;
+  font-weight: bolder;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  border: 3px solid #cc0033;
+  text-align: center;
+}
+.newPC .middle .divide-line image {
+  /* width: 100%; */
+  height: .8vh;
+  width: 26vw;
+}

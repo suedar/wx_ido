@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 13,
 			"list": [
 				{
 					"id": -1,
@@ -90,6 +90,30 @@
 					"id": -1,
 					"name": "打卡完成",
 					"pathName": "pages/main/finishCard/finishCard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "历史记录",
+					"pathName": "pages/history/history",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "进阶",
+					"pathName": "pages/main/getNewPre/getNewPre",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "强度选择",
+					"pathName": "pages/main/upgrade/upgrade",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "头像资料",
+					"pathName": "pages/headInfo/headInfo",
 					"query": ""
 				}
 			]

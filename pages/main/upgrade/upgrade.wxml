@@ -1,0 +1,23 @@
+<!--pages/main/unDone/unDone.wxml-->
+<view class='upgrade'>
+    <commonBlur>
+      <view class='ido-select'>
+        <view class='icon'>
+          <!-- <view class=''></view> -->
+          <image src='/image/icon/fan.png'></image>
+        </view>
+        <view class='content'>
+          <view>hey!</view>
+          <view class='pad-left'>
+            <view>很高兴我们一起坚持了这么久</view>
+            <view>为了更好地规划运动~</view>
+            <view>现在可以选择加大训练强度了噻</view>
+          </view>
+        </view>
+        <view class='bottom'>
+          <view class='front'></view>
+          <view class='end'></view>
+        </view>
+      </view>
+    </commonBlur>
+</view>

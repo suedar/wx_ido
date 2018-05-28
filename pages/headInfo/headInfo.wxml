@@ -1,0 +1,46 @@
+<!--pages/headInfo/headInfo.wxml-->
+<view class='ido-headInfo' >
+  <view class='top' bindtap='getDown'>i do定制运动</view>
+  <view class='image' bindtap='getDown'>
+    <image src="{{userData.avatarUrl ? userData.avatarUrl : ''}}"></image>
+  </view>
+  <view class='nickname' bindtap='getDown'>{{userData.nickName}}</view>
+  <view class='current' bindtap='getDown'>
+    <view class='current-text'>目前阶位</view>
+    <view class='current-cover'>
+      <view class='current-loading'>
+        <view class='current-pos' style='right:{{calcPos}}%;'>
+        </view>
+      </view>
+      <view class='current-nick'>{{userData.nick}}</view>               
+    </view>
+  </view>
+  <view class='headInfo-foot' bindtap='getDown'>
+    <view class='left'>
+      <view >步行</view>
+      <view >打卡</view>
+    </view>
+    <view class='right'>
+      <view>{{userData.totalFootStep}}</view>
+      <view>{{userData.totalka}}</view>
+      </view>
+    </view>
+    <view class='headInfo-content' bindtap='getDown'>
+      {{userData.day}}天，您一共运动了{{userData.totalFootStep}}步
+      <view>共计热量{{userData.caloria}}kcal</view>
+    </view>
+    <view class='headInfo-bottom' bindtap='clickBottom'>
+      <view class='pre'>{{userData.pre}}</view>
+      <view class='nick'>{{userData.nick}}</view>
+    </view>
+    <scroll-view scroll-x="true" style='margin-top: 5vh; width:100%; transform: translateY({{scrollPos}}%);' class='headInfo-scroll'>
+      <view class='headInfo-preview'>
+        <view class='item' wx:for="{{idoStage}}" wx:key="index">
+          <view class='item-pre'>{{item.pre}}</view>
+          <view class='item-nick'>{{item.nick}}</view>
+          <view class='item-needDay'>{{item.needDay}}</view>
+        </view>
+    </view>
+    </scroll-view>
+    
+</view>
