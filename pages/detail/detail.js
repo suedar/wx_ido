@@ -1,5 +1,4 @@
-// pages/history/history.js
-import { getOpenId } from '../../utils/func.js';
+// pages/detail/detail.js
 Page({
 
   /**
@@ -13,10 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(getOpenId())
-    // wx.request({
-    //   url: '',
-    // })
+  
   },
 
   /**

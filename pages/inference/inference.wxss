@@ -1,0 +1,55 @@
+/* pages/inference/inference.wxss */
+.ido-inference image {
+  width: 30px;
+  height: 30px;
+}
+.ido-inference .top {
+  width: 100vw;
+  border-bottom: .8px solid grey;
+  text-align: right;
+}
+.ido-inference .top .image {
+  margin-right: 10px;
+}
+.ido-inference .top .image image {
+  width: 25px;
+  height: 20px;
+}
+.ido-inference .ido-scroll {
+  margin-top: 10vh;
+  position: relative;
+}
+.ido-inference .ido-scroll, .swiper-scroll {
+  height: 70vh;
+}
+.ido-inference .scroll-item {
+  text-align: center;
+  width: auto;
+  margin: 20px 0;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 10px #a7a7a7;
+  border-radius: 5px;
+}
+.ido-inference swiper-item:nth-of-type(3) {
+  margin-top: 5vh;
+}
+.ido-inference swiper-item:nth-of-type(3) view {
+  margin: 10vh 0;
+}
+.ido-inference .scroll-bottom {
+  border-top: 1px solid #dfdfdf;
+  width: 70vw;
+  margin: 0 auto;
+}
+.ido-inference .bottom-content {
+  font-size: 16px;
+  display: flex;
+  width: 38vw;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 5px 15px;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #a7a7a7;
+}

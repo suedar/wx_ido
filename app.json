@@ -13,6 +13,8 @@
     "pages/main/upgrade/upgrade",    
     "pages/history/history",
     "pages/loading/loading",
+    "pages/inference/inference",
+    "pages/detail/detail",
     "pages/headInfo/headInfo",
     "pages/startLog/commonWrapper/commonWrapper"
   ],

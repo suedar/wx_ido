@@ -1,0 +1,31 @@
+<!--pages/inference/inference.wxml-->
+<view class='ido-inference'>
+  <view class='top'>
+    <view class='image'>
+      <image src='/image/icon/menu.png'></image>
+    </view>
+  </view>
+  <view class="ido-scroll">
+     <swiper 
+    indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      class='swiper-scroll'>
+      <block wx:for-index="index" wx:for="{{scrollThree}}" wx:key="index" class="scroll-view">
+        <swiper-item>
+          <view 
+          style='width:{{childItem.length + 0.5}}rem;margin-left: {{font[cindex + 5 * index]}}rem; color: #{{color[cindex + 5 * index].color}};background: #{{color[cindex + 5 * index].bg}};' class='scroll-item' wx:for-index="cindex" wx:key="bg" wx:for-item="childItem" wx:for="{{item}}">
+            {{childItem}}
+          </view>
+        </swiper-item>
+      </block>
+    </swiper> 
+  </view>
+  <view class='scroll-bottom'>
+    <view class='bottom-content'>
+      案件背景调查
+      <!-- <view class='image'> -->
+        <image src='/image/icon/lock.png'></image>
+      <!-- </view> -->
+    </view>
+  </view>
+</view>
