@@ -1,2 +1,27 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='ido-detail'>
+  <view class='top'>新闻之 --</view>
+  <view class='content'>
+    <view class='content-title'>所谓伊始</view>
+    <view class='content-detail'>
+      <view class='left'>
+        <view>时间</view>
+        <view>人物</view>
+        <view>地点</view>
+        <view>事件</view>
+      </view>
+      <view class='right'>
+        <view>清晨五点半</view>
+        <view>陈寒</view>
+        <view>s山</view>
+      </view>
+    </view>
+    <view class='text'>
+      <view class='blank'></view>
+      陈寒乘坐白色始发缆车去山顶检查，其余缆车均为橙色，早上六点十分气温逐渐升高，工作人员打开缆车准备迎接陈寒，就在此时，窄小的车厢内，一具没有头颅，浑身如黑炭烧焦的尸体倚在角落处，但身上的衣服烧毁却不严重，衣服胸口上挂着“S山缆车操作员，陈寒”字样，一时间S山乱成一团。
+    </view>
+  </view>
+  <view class='bottom' bindtap='toStory'>
+    
+  </view>
+</view>

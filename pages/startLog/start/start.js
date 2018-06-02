@@ -1,5 +1,5 @@
 // pages/startLog/start/start.js
-import { getOpenId, setLevel} from '../../../utils/func';
+import { setClockDay, getOpenId, setLevel} from '../../../utils/func';
 Page({
 
   /**
@@ -59,14 +59,16 @@ Page({
       wx.request({
         url: 'https://wxapi.devoted.net.cn/sport/hitokoto',
         success: (res) => {
-          console.log(res)
+          // console.log(res)
           wx.setStorage({
             key: 'word',
             data: res.data.data.hitokoto
           })
-          // wx.setStorageSync('word', res)
         }
       })
+    }).then(() => {
+      // 请求完设置一些东西
+      setClockDay();
     }).then(() => {
         wx.redirectTo({
         url: '../../main/main/main',

@@ -14,7 +14,11 @@ Page({
   onLoad: function (options) {
   
   },
-
+  toStory() {
+    wx.redirectTo({
+      url: '../inference/inference',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

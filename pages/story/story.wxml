@@ -1,0 +1,14 @@
+<!--pages/story/story.wxml-->
+<view class='ido-story'>
+<!-- <view class='bg-image'></view> -->
+  <view class='top'>
+    -Do记者前方快报
+  </view>
+  <rich-text nodes="{{content}}" class='content'>
+     <!-- {{content}}  -->
+  </rich-text>
+  <view class='bottom'>
+    <image s-if="sid!=0" src='/image/redirect.png'></image>
+    <image s-if="sid < (showDay - 1)" class='turn-right' src='/image/redirect.png'></image>
+  </view>
+</view>

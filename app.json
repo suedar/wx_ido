@@ -15,6 +15,7 @@
     "pages/loading/loading",
     "pages/inference/inference",
     "pages/detail/detail",
+    "pages/story/story",
     "pages/headInfo/headInfo",
     "pages/startLog/commonWrapper/commonWrapper"
   ],

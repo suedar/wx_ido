@@ -10,11 +10,6 @@ Page({
       ['当猜想直面现实', '时间——一切的关键', '真相只有一个！', '浑水摸鱼', '变色油漆，优秀'],
       ['好一个瞒天过海', '天网恢恢疏而不漏！']
     ],
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
     indicatorDots: true,
     font: []
   },
@@ -76,6 +71,41 @@ Page({
       font: initData.font,
       color: initData.color
     })
+
+    // let clockDay = wx.getStorageSync('clockDay');
+    // this.setData({
+    //   clockDay
+    // })
+
+    // 设置能显示的页数
+    let clockDay = 45;
+    let showDay = Math.ceil(Math.sqrt(clockDay * 2));
+    wx.setStorageSync('showday', showDay);
+
+    new Promise((resolve, reject) => {
+      wx.request({
+        url: 'https://wxapi.devoted.net.cn/story/getStoryList',
+        success: (res) => {
+          let storyId = res.data.data[0].id;
+          wx.setStorageSync('storyId', storyId);
+          resolve(storyId)
+        }
+      })
+    }).then((id) => {
+      wx.request({
+        url: 'https://wxapi.devoted.net.cn/story/storySummarize',
+        data: {id},
+        method: 'POST',
+        success: (res) => {
+          console.log(res)
+          let sidArr = [];
+          res.data.data.forEach((item) => {
+            sidArr.push(item.sid);
+          })
+          wx.setStorageSync('sidArr', sidArr);
+        }
+      })
+    })
   },
   randArr(arr) {
     var ret = [],
@@ -93,6 +123,16 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  clickStory(index) {
+    wx.navigateTo({
+      url: '../story/story?index=' + index,
+    })
+  },
+  toBg() {
+    wx.redirectTo({
+      url: '../detail/detail',
+    })
+  },
   onReady: function () {
   
   },

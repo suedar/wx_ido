@@ -1,0 +1,47 @@
+/* pages/story/story.wxss */
+.ido-story image{
+  width: 25px;
+  height: 25px;
+}
+.ido-story {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80vw;
+  padding: 2.5vh 10vw;
+  margin: 0 auto;
+  height: 95vh;
+  /* padding: 2.5vh 0; */
+  position: relative;
+  background: url('http://oz3on0sof.bkt.clouddn.com/storybg.png');
+   background-size: 100% 100%; 
+  background-repeat: no-repeat;
+}
+/* .ido-story .bg-image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: url('http://oz3on0sof.bkt.clouddn.com/story.png');
+   background-size: 100% 140%; 
+  background-repeat: no-repeat;
+} */
+.ido-story .top {
+  margin-top: 16vh;
+  color: #E5666E;
+}
+.ido-story .content .text {
+  width: 2rem;
+  height: 1rem;
+  display: inline-block;
+}
+.ido-story .bottom {
+  display: flex;
+  padding: 0 15vw;
+  justify-content: space-between;
+}
+.ido-story .turn-right {
+  transform: rotateZ(180deg);
+}

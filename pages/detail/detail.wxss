@@ -1,1 +1,69 @@
 /* pages/detail/detail.wxss */
+.ido-detail {
+  border: 1px solid #000;
+  width: 90vw;
+  margin: 9vh auto;
+  height: 80vh;
+  /* height: 80vh;
+  line-height: 80vh; */
+  color: #eb5258;
+  position: relative;
+}
+.ido-detail .top {
+  margin-top: 8vh;
+  margin-left: 10vw;
+}
+.ido-detail .content {
+  width: 80%;
+  margin: 0 auto;
+  /* margin-left: 5%; */
+}
+.ido-detail .content .content-title {
+  text-align: center; 
+  margin: 2vh 0;
+  color: #000;
+}
+.ido-detail .content .content-detail {
+  display: flex;
+   width: 40vw; 
+  margin: 0 auto;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+}
+.ido-detail .content .content-detail .left {
+  color: #000;
+}
+.ido-detail .content .content-detail .right {
+  margin-left: 3vw;
+}
+.ido-detail .content .text {
+  font-size: 15px;
+  margin-left: 16vw;
+}
+.ido-detail .content .blank {
+  width: 10vw;
+  height: 10px;
+  display: inline-block;
+}
+.ido-detail .bottom {
+  /* text-align: right; */
+  /* margin-top: 5.5vh; */
+  width: 3.5rem;   
+  height: 0px;
+  border-bottom: 1.3rem solid #eb5258;
+  border-left: 1rem solid transparent;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin-right: 10px;
+   /* filter: drop-shadow(1px, 2px, 3px, #000);  */
+}
+.ido-detail .bottom::after {
+  position: absolute;
+  content: '了解了';
+   color: white;
+   font-size: 15px;    
+  /* color: #000; */
+   top: 10rpx;
+  right: 10px;
+}

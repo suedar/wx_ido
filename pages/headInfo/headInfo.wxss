@@ -139,7 +139,7 @@
 }
 .ido-headInfo .headInfo-preview {
   display: flex;
-  width: 140vw;
+  width: 120vw;
   background: #fff;
 }
 .headInfo-scroll {

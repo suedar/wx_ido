@@ -3,6 +3,7 @@
 //   }
 // }
 
+// 获取openid
 function getOpenId () {
   let openId = wx.getStorageSync('openId')
   // console.log(openId)
@@ -21,6 +22,7 @@ function getOpenId () {
 //   })
 // }
 
+// 设置等级
 function setLevel(level) {
   let userData = wx.getStorageSync('userData');
   const pre = ['白', '包', '豆', '青', '炸', '尊'];
@@ -28,6 +30,26 @@ function setLevel(level) {
   userData.pre = pre[level];
   userData.nick = nick[level]
   wx.setStorageSync('userData', userData)
+}
+
+// 设置打卡天数
+function setClockDay() {
+  let openId = getOpenId();
+  wx.request({
+    url: 'https://wxapi.devoted.net.cn/user/stepInfo',
+    method: 'POST',
+    data: {openId},
+    success: (response) => {
+      // console.log(response)
+        if (response.data.data) {
+          console.log(response)
+          wx.setStorageSync('clockDay', response.data.data.clockDay)
+        }
+        else {
+          wx.setStorageSync('clockDay', 0)          
+        }
+    }
+  })
 }
 
 const idoStage = [
@@ -53,16 +75,17 @@ const idoStage = [
   {
     pre: '炸',
     nick: '酱面学士',
-    needDay: '打卡33天'
+    needDay: '打卡39天'
   },
   {
     pre: '尊',
     nick: '火锅翰林',
-    needDay: '打卡50天'
+    needDay: '打卡66天'
   }
 ]
 export {
   getOpenId,
   setLevel,
-  idoStage
+  idoStage,
+  setClockDay
 }
