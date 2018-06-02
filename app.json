@@ -7,6 +7,7 @@
     "pages/main/percent/percent",
     "pages/main/unDone/unDone",
     "pages/main/commonBlur/commonBlur",
+    "pages/main/commonBottom/commonBottom",
     "pages/main/done/done",
     "pages/main/finishCard/finishCard",
     "pages/main/getNewPre/getNewPre",

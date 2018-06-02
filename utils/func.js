@@ -31,7 +31,18 @@ function setLevel(level) {
   userData.nick = nick[level]
   wx.setStorageSync('userData', userData)
 }
-
+// 设置目标步数
+function setTarget(isIncrease = 0) {
+  let openId = getOpenId()
+  wx.request({
+    url: 'https://wxapi.devoted.net.cn/sport/targetStep',
+    method: 'POST',
+    data: { isIncrease, openId},
+    success: (res) => {
+      wx.setStorageSync('targetStep', res.data.data.targetStep)
+    }
+  })
+}
 // 设置打卡天数
 function setClockDay() {
   let openId = getOpenId();
@@ -42,7 +53,7 @@ function setClockDay() {
     success: (response) => {
       // console.log(response)
         if (response.data.data) {
-          console.log(response)
+          // console.log(response)
           wx.setStorageSync('clockDay', response.data.data.clockDay)
         }
         else {
@@ -87,5 +98,6 @@ export {
   getOpenId,
   setLevel,
   idoStage,
-  setClockDay
+  setClockDay,
+  setTarget
 }

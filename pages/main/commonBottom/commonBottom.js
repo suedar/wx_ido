@@ -11,14 +11,17 @@ Component({
     // }
   },
   properties: {
-    userData:{
-      type: Object
-    }
+    
   },
-  methods: {
-    toHeadInfo() {
+  methods:{
+    toHistory() {
       wx.navigateTo({
-        url: '../../headInfo/headInfo',
+        url: '../../history/history',
+      })
+    },
+    toInference() {
+      wx.navigateTo({
+        url: '../../inference/inference',
       })
     }
   }

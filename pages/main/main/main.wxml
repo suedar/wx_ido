@@ -1,7 +1,7 @@
 <!--pages/main/main/main.wxml-->
 <view class='main'>
   <commonHead userData="{{userData}}"></commonHead>
-  <view class='main-middle' bindtap='clickDO'>
+  <view class='{{isShow}}' bindtap='clickDO'>
     <view class='main-middle-top'>
       <view class='linkLeft'></view>
       <view class='linkMiddle'>
@@ -16,10 +16,6 @@
       <view class='linkRight'></view>
     </view>
   </view>
-  <view class='main-buttom'>
-    <view>
-      <image src='/image/icon/foot.png'></image>
-    </view>
-    <view> <image src='/image/icon/link.png'></image></view>
-  </view>
+  <!-- //  -->
+  <commonBottom></commonBottom>
 </view>

@@ -1,8 +1,8 @@
 <!--pages/main/commonHead/commonHead.wxml-->
 
 <view class='commonHead'>
-  <image src="{{userData.avatarUrl ? userData.avatarUrl : ''}}"></image>
-  <view class='rightSide'>
+  <image bindtap='toHeadInfo' src="{{userData.avatarUrl ? userData.avatarUrl : ''}}"></image>
+  <view class='rightSide' bindtap='toHeadInfo'>
     <view class='nickName'>{{userData.nickName ? userData.nickName : ''}}</view>
     <view class='pre'>{{userData.pre ? userData.pre : ''}}</view>
     <view class='nick'>{{userData.nick ? userData.nick : ''}}</view>

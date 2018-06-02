@@ -2,6 +2,7 @@
 .ido-headInfo {
   height: 100vh;
   overflow: hidden;
+  z-index: 5;
 }
 .ido-headInfo .top {
   font-size: 13px;
@@ -49,6 +50,7 @@
 }
 .ido-headInfo .current-loading {
   /* margin-top: 7.5vh; */
+  /* z-index: 5; */
    position: relative;
    overflow: hidden;    
   width: 60vw;

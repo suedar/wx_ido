@@ -1,5 +1,5 @@
 // pages/startLog/start/start.js
-import { setClockDay, getOpenId, setLevel} from '../../../utils/func';
+import { setTarget, setClockDay, getOpenId, setLevel} from '../../../utils/func';
 Page({
 
   /**
@@ -33,7 +33,7 @@ Page({
                   if (response.statusCode !== 500) {
                     wx.setStorageSync('userData', response.data.data) 
                     wx.setStorageSync('openId', response.data.data.openId)
-                    resolve();
+                    resolve(response.data.data.openId);
                   }
                 }
               })
@@ -41,18 +41,21 @@ Page({
           })
         }
       })
-    }).then(()=> {
-      let openId = getOpenId();
-      console.log(openId)
+    }).then((res)=> {
+      let openId = res
       wx.request({
         url: 'https://wxapi.devoted.net.cn/user/stepInfo',
         method: 'POST',
-        header: {
-          'content-type': 'application/x-www-from-urlencoded' // 默认值
-        },
         data: {openId: openId},
         success: (res) => {
-          console.log(res)
+          if (res.data.data) {
+            // require
+            // console.log(res.data.data)
+            setLevel(res.data.data.level);            
+          }
+          else {
+            setLevel(0);
+          }
         }
       })      
     }).then(() => {
@@ -69,6 +72,7 @@ Page({
     }).then(() => {
       // 请求完设置一些东西
       setClockDay();
+      setTarget();
     }).then(() => {
         wx.redirectTo({
         url: '../../main/main/main',

@@ -6,9 +6,10 @@ Page({
    */
   data: {
     letter: '3456',
-    foodImage: 'fries',
+    foodImage: 'chips',
     foodNumber: 3,
-    calorieData: 225
+    calorieData: 225,
+    hidePending: true
   },
   // 做不了 小程序采用一次性渲染模式
   // rollData: function(realData, index = 0){
@@ -61,12 +62,49 @@ Page({
    */
   onLoad: function (options) {
     let userData = wx.getStorageSync('userData')
-    console.log(userData)
+    let letter = wx.getStorageSync('targetStep');
     this.setData({
-      userData
+      userData,
+      letter
     })
     // this.rollData([1,2,3,4])
+    // 加载下面的数据
 
+    wx.request({
+      url: 'https://wxapi.devoted.net.cn/sport/heatTransfer',
+      method: 'POST',
+      data: { stepNum: letter },
+      success: (res) => {
+        console.log(res.data.data);
+        let sportData = res.data.data;
+        const foodChoice = ['cola', 'chips', 'hamburger'];
+        let choice = Math.floor(Math.random()*3);
+        let foodImage = foodChoice[choice];
+        this.setData({
+          calorieData: sportData.calorie,
+          foodImage: foodImage,
+          foodNumber: sportData.food[foodImage]
+        })
+      }
+    })
+
+    let runData = {}
+    wx.getWeRunData({
+      success: (res) => {
+        runData.iv = res.iv;
+        runData.encryptedData = res.encryptedData;
+        runData.openId = wx.getStorageSync('openId');
+        console.log(runData)
+        wx.request({
+          url: 'https://wxapi.devoted.net.cn/sport/stepInfo',
+          method: 'POST',
+          data: runData,
+          success: (res) => {
+            console.log(res)
+          }
+        })
+      }
+    })  
   },
 
   /**
@@ -116,5 +154,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  showDown() {
+    this.setData({
+      hidePending: false
+    })
   }
 })

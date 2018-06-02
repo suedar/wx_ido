@@ -2,12 +2,16 @@
 
 .loadingPage{
   height: 80vh;
+  /* padding:  */
   width: 80vw;
+  margin: 10vh 10vw;
   border: 1px solid #9f9f9f;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+  background: #fff;
+  z-index: 100;
   /* margin-top: 5vh; */
 }
 .loadingPage .loadingImage{

@@ -1,4 +1,4 @@
 <!--pages/main/commonBlur/commonBlur.wxml-->
-<view class='main-blur'>
+<view class='main-blur' wx:if="loadingShow">
   <slot></slot>
 </view>

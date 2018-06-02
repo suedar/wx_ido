@@ -6,7 +6,8 @@ Page({
    */
   data: {
     userData: '',
-    word: ''
+    word: '',
+    isShow: 'main-middle'
   },
 
   /**
@@ -28,9 +29,19 @@ Page({
       },
     })
   },
-  clickDO(){
-    wx.redirectTo({
-      url: '../clickDO/clickDO',
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  },
+  clickDO() { 
+    new Promise((resolve, reject) => {
+      this.setData({
+        isShow: 'main-middle isDisapperence'
+      })
+      setTimeout(resolve, 750)
+    }).then(() => {
+        wx.redirectTo({
+        url: '../clickDO/clickDO',
+      })
     })
   },
   /**

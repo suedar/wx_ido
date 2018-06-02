@@ -63,10 +63,10 @@ Page({
     })
   },
   onLoad: function (options) {
-    console.log(this)
+    // console.log(this)
     this.changeAll();
     let initData = this.data.constData
-    console.log(initData)
+    // console.log(initData)
     this.setData({
       font: initData.font,
       color: initData.color
@@ -88,6 +88,7 @@ Page({
         success: (res) => {
           let storyId = res.data.data[0].id;
           wx.setStorageSync('storyId', storyId);
+          // console.log(storyId)
           resolve(storyId)
         }
       })

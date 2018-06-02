@@ -1,1 +1,75 @@
 /* pages/history/history.wxss */
+.ido-history {
+  
+  margin-top: 10vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  /* min-height: 100vh; */
+   height: 90vh; 
+}
+.ido-history .top {
+  width: 80vw;
+  /* height: 80vh; */
+  margin: 0 auto;
+  font-size: 13px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ff3b3b;
+}
+.ido-history .content {
+  /* margin-top: 10vh;  */
+  margin-left: 20vw;
+  min-height: 60vh;
+}
+.ido-history .content .item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.ido-history .content .item .left {
+  width: 10vw;
+}
+.ido-history .content .item .middle {
+  height: 2vh;
+  background: red;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px #cecece;
+  margin-right: 8px;
+}
+.ido-history .content .item .right {
+  font-size: 10px;
+}
+.ido-history .bgtext {
+  position: absolute;
+  bottom: 40vh;
+  color: #cecece;
+  text-align: center;
+  left: 50%;
+  height: 10vh;
+  line-height: 10vh;
+  font-size: 20px;
+  transform: translateX(-50%);
+  /* width: 30vw; */
+  margin: 0 auto;
+}
+
+.ido-history .bottom {
+  display: flex;
+  height: 10vh;
+  width: 50vw;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.ido-history image {
+  width:30px;
+  height: 30px;
+  border: 1px solid #cecece;
+}
+.ido-history .bottom .text {
+  font-size: 15px;
+  padding-left: 10px;
+  border-left: 1px solid #cecece;
+  /* margin-left: 5px; */
+}

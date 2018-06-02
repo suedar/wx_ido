@@ -6,6 +6,8 @@ Component({
     // num: 30
   },
   properties: {
-
+    loadingShow: {
+      type: Boolean
+    }
   }
 })

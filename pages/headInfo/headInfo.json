@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents": {
+    "loading": "../loading/loading",
+    "commonBlur": "../main/commonBlur/commonBlur"
+  }
+}

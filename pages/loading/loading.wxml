@@ -1,6 +1,6 @@
 <!--pages/loading/loading.wxml-->
-<view class='ido-loading'>
-  <commonBlur>
+<view class='ido-loading' wx:if="{{loadingShow}}">
+   <commonBlur> 
     <view class='loadingPage'>
           <view class='loadingImage'>
               <view class='image'></view>
@@ -13,6 +13,6 @@
           <view class='word'>定制你的运动计划</view>
         </view>
     </view>
-  </commonBlur>
+   </commonBlur> 
 
 </view>

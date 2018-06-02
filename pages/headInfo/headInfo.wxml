@@ -1,6 +1,9 @@
 <!--pages/headInfo/headInfo.wxml-->
 <view class='ido-headInfo' >
-  <view class='top' bindtap='getDown'>i do定制运动</view>
+  <loading loadingShow="{{loadingShow}}"></loading>
+  <!-- <commonBlur loadingShow="{{loadingShow}}"> -->
+    <view>
+    <view class='top' bindtap='getDown'>i do定制运动</view>
   <view class='image' bindtap='getDown'>
     <image src="{{userData.avatarUrl ? userData.avatarUrl : ''}}"></image>
   </view>
@@ -9,7 +12,7 @@
     <view class='current-text'>目前阶位</view>
     <view class='current-cover'>
       <view class='current-loading'>
-        <view class='current-pos' style='right:{{calcPos}}%;'>
+        <view class='current-pos' style='right:{{100 - calcPos}}%;'>
         </view>
       </view>
       <view class='current-nick'>{{userData.nick}}</view>               
@@ -27,7 +30,7 @@
     </view>
     <view class='headInfo-content' bindtap='getDown'>
       {{userData.day}}天，您一共运动了{{userData.totalFootStep}}步
-      <view>共计热量{{userData.caloria}}kcal</view>
+      <view>共计热量{{userData.cal}}kcal</view>
     </view>
     <view class='headInfo-bottom' bindtap='clickBottom'>
       <view class='pre'>{{userData.pre}}</view>
@@ -42,5 +45,7 @@
         </view>
     </view>
     </scroll-view>
-    
+    </view>
+  <!-- </commonBlur> -->
+  
 </view>

@@ -2,6 +2,7 @@
   "usingComponents": {
     "commonHead": "../commonHead/commonHead",
     "percent": "../percent/percent",
-    "commonBlur": "../commonBlur/commonBlur"
+    "commonBlur": "../commonBlur/commonBlur",
+    "commonBottom": "../commonBottom/commonBottom"
   }
 }

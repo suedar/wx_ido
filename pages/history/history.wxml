@@ -1,2 +1,23 @@
 <!--pages/history/history.wxml-->
-<text>pages/history/history.wxml</text>
+<view class='ido-history'>
+  <view class='top'>
+    历史数据
+  </view>
+  <view class='content' >
+    <view class='item' wx:for="{{historyData}}" wx:key="index">
+      <view class='left'>{{item.date}}</view>
+      <view class='middle' style='width:{{item.stepNum / 25000 *60}}vw;'></view>
+      <view class='right'>{{item.stepNum}}</view>
+    </view>
+  </view>
+  <view class='bgtext'>
+    记录这么空
+    <view class=''>再不动起来就废了</view>
+  </view>
+  <view class='bottom'>
+    <image src='/image/loading.PNG'></image>
+    <view class='text'>
+      定制你的运动计划
+    </view>
+  </view>
+</view>

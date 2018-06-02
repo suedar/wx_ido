@@ -12,7 +12,9 @@
         </feMerge>
     </filter>
 </svg>          -->
-  <commonBlur></commonBlur>
+
+  <!-- <commonBlur></commonBlur> -->
+
   <commonHead userData="{{userData}}"></commonHead>
   <view class='clickDo-footstep'>
     <view class='clickDo-leftRight'></view>
@@ -20,14 +22,14 @@
       <view class='letter'>{{letter}}</view>
       <view class='step'>步</view>
     </view>
-    <view class='clickDo-buttom'>
+    <view class='clickDo-buttom' bindtap='showDown'>
       <view class='line'></view>
       <view class='word'>Do</view>  
       <view class='line'></view>
       <view class='buttomWord'>从Do开始</view>        
     </view>
   </view>
-  <view class='clickDo-calorie'>
+  <view class='clickDo-calorie' hidden="{{hidePending}}">
     <view class='predict'></view>
     <view class='calorie-transfer'>
       <view class='fire'>
@@ -42,7 +44,7 @@
       </view>
     </view>
   </view>
-  <view class='clickDo-pending'>
+  <view class='clickDo-pending' hidden="{{hidePending}}">
     <view class='pending'></view>   
     <view class='loading-line'>
       <percent left="20"></percent>
@@ -55,5 +57,7 @@
       </view>
     </view> 
   </view>
-  <view class='clickDo-button'>3333</view>
+  <!-- <view class='clickDo-button'>3333</view> -->
+    <commonBottom></commonBottom>
+
 </view>

@@ -1,0 +1,37 @@
+/* pages/main/commonBottom/commonBottom.wxss */
+
+ .main-buttom {
+   margin-top: 10vh; 
+  float: right;
+ }
+ .main-buttom view{
+  margin: 40rpx 0px;
+  border: none;
+  width: 160rpx;
+  height: 55rpx;
+  padding: 5rpx 0;
+  border-radius: none;
+  line-height: 70rpx;
+  text-align: center;
+  box-shadow: 1px 2px 3px #a6a6a6;
+}
+.main-buttom view:first-of-type{
+  background-color: rgba(208, 225, 125, 1);
+  /* border: none; */
+}
+ .main-buttom view:nth-of-type(2){
+  background-color: rgba(255, 223, 37, 1);
+  /* border: none; */
+}
+.main-buttom image{
+  /* margin-top: 5rpx; */
+  width: 40rpx;
+  height: 40rpx;
+}
+ .main-buttom view:first-of-type image{
+   width: 45rpx;
+  height: 45rpx; 
+}
+ .main-buttom view:nth-of-type(2) image{
+  margin-left: 10rpx;
+}
