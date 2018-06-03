@@ -1,7 +1,7 @@
 /* pages/headInfo/headInfo.wxss */
 .ido-headInfo {
   height: 100vh;
-  overflow: hidden;
+    overflow: hidden;  
   z-index: 5;
 }
 .ido-headInfo .top {
@@ -52,7 +52,7 @@
   /* margin-top: 7.5vh; */
   /* z-index: 5; */
    position: relative;
-   overflow: hidden;    
+    overflow: hidden;     
   width: 60vw;
   height: 1vh;
   border-radius: 5px;
@@ -85,7 +85,8 @@
    bottom: 50%; 
   font-size: 10px;
   width: 60px;
-  left: -10px;
+  /* right: 0px; */
+   left: -10px; 
   text-align: center;
   height: 30px;
   line-height: 25px;

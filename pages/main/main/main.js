@@ -1,4 +1,5 @@
 // pages/main/main/main.js
+import {sleep} from '../../../utils/func.js';
 Page({
 
   /**
@@ -28,9 +29,6 @@ Page({
         })
       },
     })
-  },
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
   },
   clickDO() { 
     new Promise((resolve, reject) => {

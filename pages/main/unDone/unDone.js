@@ -6,6 +6,16 @@ Component({
     // num: 30
   },
   properties: {
-    
+    isUnDone: {
+      type: Boolean
+    }
+  },
+  methods:{
+    close() {
+      this.setData({
+        isUnDone: false
+      })
+      this.triggerEvent('myevent', '');
+    }
   }
 })

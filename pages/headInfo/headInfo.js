@@ -14,13 +14,13 @@ Page({
       totalFootStep: 2345,
       totalka: 10,
       day: 10,
-      cal: 6666,
+      calorie: 6666,
     },
     idoStage: idoStage.slice(1,6),
     calcPos: 0,
     scrollPos: 0,
     loadingShow: true,
-    // cal: 666
+    cal: 666
   },
   /**
    * 生命周期函数--监听页面加载
@@ -49,12 +49,13 @@ Page({
         success: (res) => {
           let data = res.data.data;
           // console.log(data)
-          userData.cal = data.calorie
-          // resolve/
+          userData.calorie = data.calorie
+          this.setData({
+            userData
+          })
         }
       })
-    }).then(() => {
-      // console.log(userData)
+    }).then((cal) => {
       let calcPos = 0;
       let totalKa = userData.totalka;
       if (totalKa === 1) {
@@ -75,10 +76,10 @@ Page({
       else {
         calcPos = 100
       }
+      console.log(userData)
       this.setData({
-        userData,
         calcPos,
-        loadingShow: false
+        loadingShow: false,
       })
     })
   },

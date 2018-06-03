@@ -3,6 +3,12 @@
     "commonHead": "../commonHead/commonHead",
     "percent": "../percent/percent",
     "commonBlur": "../commonBlur/commonBlur",
-    "commonBottom": "../commonBottom/commonBottom"
+    "commonBottom": "../commonBottom/commonBottom",
+    "finishCard": "../finishCard/finishCard",
+    "upgrade": "../upgrade/upgrade",
+    "getNewPre": "../getNewPre/getNewPre",
+    "done": "../done/done",
+    "unDone": "../unDone/unDone",
+    "loading": "../../loading/loading"        
   }
 }

@@ -1,4 +1,6 @@
 /* pages/main/unDone/unDone.wxss */
+.unDone{
+}
 .unDone .dialog {
   width: 56%;
   position: relative;

@@ -1,8 +1,8 @@
 <!--pages/main/done/done.wxml-->
-<view class='clickDo-done'>
+<view class='clickDo-done' wx:if="{{isDone}}">
   <commonBlur>
     <view class='dialog'>
-      <view class='finish'>目标完成  :)</view>
+      <view class='finish'>{{isFinish ? '目标完成  :)' : '还要继续加油哦 :('}}</view>
       <view class='today'>
         <view class='head'>今日成果</view>
         <view class='content'>
@@ -14,8 +14,9 @@
           <view class='animate foot'>{{footstep ? footstep : 6666}}步</view>
         </view>
       </view>
-      <view class='word'>bingo!元气满满的一天</view>
-      <view class='card' ></view>
+      <view class='word'>{{isFinish ? 'bingo!元气满满的一天' : 'fighting! 明日再战'}}</view>
+      <view class='card' bindtap="tocard" wx:if="{{isFinish}}"></view>
+      <view class=' notFinish' bindtap='cancel' wx:else></view>
     </view>
   </commonBlur>
 </view>

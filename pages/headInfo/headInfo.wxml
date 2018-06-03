@@ -15,7 +15,7 @@
         <view class='current-pos' style='right:{{100 - calcPos}}%;'>
         </view>
       </view>
-      <view class='current-nick'>{{userData.nick}}</view>               
+      <view class='current-nick' style='left:{{calcPos - 8}}%;'>{{userData.nick}}</view>               
     </view>
   </view>
   <view class='headInfo-foot' bindtap='getDown'>
@@ -30,7 +30,7 @@
     </view>
     <view class='headInfo-content' bindtap='getDown'>
       {{userData.day}}天，您一共运动了{{userData.totalFootStep}}步
-      <view>共计热量{{userData.cal}}kcal</view>
+      <view>共计热量{{userData.calorie}}kcal</view>
     </view>
     <view class='headInfo-bottom' bindtap='clickBottom'>
       <view class='pre'>{{userData.pre}}</view>

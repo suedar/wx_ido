@@ -6,6 +6,30 @@ Component({
     // num: 30
   },
   properties: {
-
+    calorie: {
+      type: Number
+    },
+    footstep:{
+      type: Number
+    },
+    isDone: {
+      type: Boolean
+    },
+    isFinish: {
+      type: Boolean
+    }
+  },
+  methods:{
+    cancel() {
+      this.setData({
+        isDone: false
+      })
+    },
+    tocard() {
+      this.setData({
+        isDone: false
+      })
+      this.triggerEvent('myevent', '');
+    }
   }
 })

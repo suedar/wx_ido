@@ -1,6 +1,6 @@
 <!--pages/main/finishCard/finishCard.wxml-->
 <!--pages/main/done/done.wxml-->
-<view class='clickDo-finishCard'>
+<view wx:if="{{show}}" class='clickDo-finishCard'>
   <commonBlur>
     <view class='daka'>
       <view class='image'>
@@ -10,7 +10,7 @@
       </view>
       <view class='word'>打卡完成</view>
       <view class='word'>{{date}}</view>
-      <view class='no'>x</view>
+      <view class='no' bindtap='cancel'>x</view>
     </view>
   </commonBlur>
 </view>

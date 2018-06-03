@@ -15,6 +15,17 @@
 
   <!-- <commonBlur></commonBlur> -->
 
+   <upgrade isUpgrade="{{isUpgrade}}"></upgrade> 
+    <getNewPre nickname="{{nick}}" isUpgrade="{{isUpgrade}}"></getNewPre>    
+  
+    <finishCard bind:myevent="checkUpgrade" show="{{isShowCard}}" sportDay="{{sportDay}}"></finishCard>  
+    <done bind:myevent="showFinishCard" isFinish="{{isFinish}}" footstep="{{todayStep}}" calorie="{{todayCal}}" isDone="{{isDone}}"></done>   
+    <unDone bind:myevent="showCard" isUnDone="{{isUnDone}}"></unDone> 
+
+
+  <loading loadingShow="{{loadingShow}}"></loading>
+
+
   <commonHead userData="{{userData}}"></commonHead>
   <view class='clickDo-footstep'>
     <view class='clickDo-leftRight'></view>
@@ -52,7 +63,7 @@
       <percent top="32" rotate="true" num="50" left="40"></percent>
       <percent top="32" rotate="true" num="100" left="86"></percent>
       <view class='border'>
-        <view class='content'>
+        <view class='content' style="transform: translateX({{todayPercent}}%);">
         </view>
       </view>
     </view> 

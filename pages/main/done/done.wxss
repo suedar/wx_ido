@@ -93,7 +93,7 @@
    font-size: 16px;
    font-weight: bold;
  }
- .clickDo-done .dialog .card {
+ .clickDo-done .dialog .card ,.clickDo-done .dialog .notFinish{
    border: 1px solid #fff;
    width: 80rpx;
    /* ma-left: 10rpx; */
@@ -103,6 +103,15 @@
    transform: skewX(-40deg);
    margin-bottom: 3vh;
    position: relative;
+ }
+ .clickDo-done .dialog .notFinish::after{
+  position: absolute;
+    content: '离开';
+    top: 0px;
+    font-size: 15px;
+    padding-left: 10rpx;
+    transform: skewX(40deg);
+    text-align: center;
  }
   .clickDo-done .dialog .card::after {
     position: absolute;

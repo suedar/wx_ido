@@ -1,12 +1,12 @@
 <!--pages/main/unDone/unDone.wxml-->
-<view class='unDone'>
+<view class='unDone' wx:if="{{isUnDone}}">
     <commonBlur>
       <view class='dialog'>
         什么鬼，目标没完成？？
         <view class='padding'>
           难过到我对话框都黑了        
         </view>
-        <view class='lightning'>
+        <view class='lightning' bindtap='close'>
           <image src="/image/icon/lightning.png"></image>
         </view>
       </view>

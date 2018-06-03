@@ -78,9 +78,9 @@ Page({
     // })
 
     // 设置能显示的页数
-    let clockDay = 45;
+    let clockDay = wx.getStorageSync('clockDay');
     let showDay = Math.ceil(Math.sqrt(clockDay * 2));
-    wx.setStorageSync('showday', showDay);
+    wx.setStorageSync('showday', showDay -1);
 
     new Promise((resolve, reject) => {
       wx.request({
@@ -124,10 +124,15 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  clickStory(index) {
-    wx.navigateTo({
-      url: '../story/story?index=' + index,
-    })
+  clickStory(item) {
+    let index = item.target.dataset.index;
+    let showday = wx.getStorageSync('showday');
+    if (index < showday) {
+      wx.navigateTo({
+        url: '../story/story?index=' + index,
+      })
+    }
+    
   },
   toBg() {
     wx.redirectTo({

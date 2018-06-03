@@ -29,7 +29,7 @@
   background-repeat: no-repeat;
 } */
 .ido-story .top {
-  margin-top: 16vh;
+  margin-top: 10vh;
   color: #E5666E;
 }
 .ido-story .content .text {
@@ -38,10 +38,23 @@
   display: inline-block;
 }
 .ido-story .bottom {
-  display: flex;
-  padding: 0 15vw;
-  justify-content: space-between;
+  /* display: flex; */
+  position: relative;
+  margin: 0 15vw;
+  height: 25px;
+  width: 50vw;
+  /* justify-content: space-between; */
 }
-.ido-story .turn-right {
+
+.ido-story .bottom .firImg:first-of-type {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.ido-story .bottom .turn-right {
   transform: rotateZ(180deg);
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }

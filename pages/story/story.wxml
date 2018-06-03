@@ -1,14 +1,15 @@
 <!--pages/story/story.wxml-->
 <view class='ido-story'>
 <!-- <view class='bg-image'></view> -->
+  <loading loadingShow="{{loadingShow}}"></loading>
   <view class='top'>
     -Do记者前方快报
   </view>
   <rich-text nodes="{{content}}" class='content'>
      <!-- {{content}}  -->
   </rich-text>
-  <view class='bottom'>
-    <image s-if="sid!=0" src='/image/redirect.png'></image>
-    <image s-if="sid < (showDay - 1)" class='turn-right' src='/image/redirect.png'></image>
-  </view>
+   <view class='bottom'>
+    <!-- <image wx:if="{{sid}}" bindtap='toLeft' class='firImg' src='/image/redirect.png'></image>
+    <image wx:if="{{sid < showDay }}" bindtap='toRight' class='turn-right' src='/image/redirect.png'></image> -->
+  </view> 
 </view>

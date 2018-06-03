@@ -1,5 +1,5 @@
 <!--pages/main/getNewPre/getNewPre.wxml-->
-<view class='clickDo-getNewPre'>
+<view class='clickDo-getNewPre'  wx:if="{{isUpgrade}}">
   <commonBlur>
     <view class='newPC'>
       <view class='head'>获得了新身份</view>
@@ -20,7 +20,7 @@
           <view>再接再厉 加油！</view>
         </view>
       </view>
-      <view class='exit'>√</view>
+      <view class='exit' bindtap='cancel'>√</view>
     </view>
   </commonBlur>
 </view>

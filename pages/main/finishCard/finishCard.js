@@ -6,11 +6,19 @@ Component({
     date: `${new Date().getFullYear()}/${new Date().getMonth() < 10 ? `0${new Date().getMonth()}`: new Date().getMonth()}/${new Date().getDate() < 10 ? `0${new Date().getDate()}`: new Date().getDate()}`
   },
   properties: {
-
+    show: {
+      type: Boolean
+    },
+    sportDay: {
+      type: Number
+    }
   },
-  // computed: {
-  //   date() {
-  //     return `${new Date().getFullYear()}`;
-  //   }
-  // }
+  methods: {
+    cancel(){
+      this.setData({
+        show: false
+      })
+      this.triggerEvent('myevent');
+    }
+  }
 })

@@ -21,7 +21,9 @@ function getOpenId () {
 //     delta: -1
 //   })
 // }
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
 // 设置等级
 function setLevel(level) {
   let userData = wx.getStorageSync('userData');
@@ -99,5 +101,6 @@ export {
   setLevel,
   idoStage,
   setClockDay,
-  setTarget
+  setTarget,
+  sleep
 }

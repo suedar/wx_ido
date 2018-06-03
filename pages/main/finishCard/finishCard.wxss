@@ -4,6 +4,7 @@
   height: 87vh;
   border: 1px solid #7d7d7d;
   position: relative;
+  background-color: #fff;
 }
 .clickDo-finishCard .daka .image {
   width: 100%;

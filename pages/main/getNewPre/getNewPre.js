@@ -6,11 +6,20 @@ Component({
     nickname: '包子布衣'
   },
   properties: {
-
+    isUpgrade: {
+      type: Boolean
+    },
+    nickname: {
+      type: String
+    }
   },
-  // computed: {
-  //   date() {
-  //     return `${new Date().getFullYear()}`;
-  //   }
-  // }
+  methods: {
+    cancel() {
+      // console.log(this)
+      // this.isUpgrade = false
+      this.setData({
+        isUpgrade: false
+      })
+    }
+  }
 })
