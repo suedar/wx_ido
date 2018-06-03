@@ -25,25 +25,41 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 // 设置等级
-function setLevel(level) {
+function setLevel(level = 0) {
+  // console.log(level)
+  // console.log(333)
   let userData = wx.getStorageSync('userData');
+  // console.log(userData)
   const pre = ['白', '包', '豆', '青', '炸', '尊'];
   const nick = ['新手小白', '包子布衣', '豆腐秀才', '青团举人', '酱面学士', '火锅翰林']
+  // console.log(pre[level],nick[level])
   userData.pre = pre[level];
   userData.nick = nick[level]
+  // console.log(userData)
   wx.setStorageSync('userData', userData)
 }
 // 设置目标步数
 function setTarget(isIncrease = 0) {
-  let openId = getOpenId()
-  wx.request({
-    url: 'https://wxapi.devoted.net.cn/sport/targetStep',
-    method: 'POST',
-    data: { isIncrease, openId},
-    success: (res) => {
-      wx.setStorageSync('targetStep', res.data.data.targetStep)
+  return new Promise((resolve) => {
+    let target = wx.getStorageSync('targetStep');
+    if (target) {
+      resolve(target)
+    }
+    else {
+      let openId = getOpenId()
+      wx.request({
+        url: 'https://wxapi.devoted.net.cn/sport/targetStep',
+        method: 'POST',
+        data: { isIncrease, openId },
+        success: (res) => {
+          wx.setStorageSync('targetStep', res.data.data.targetStep)
+          console.log(2333)
+          resolve();
+        }
+      })
     }
   })
+  
 }
 // 设置打卡天数
 function setClockDay() {

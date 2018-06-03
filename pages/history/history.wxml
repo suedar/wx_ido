@@ -1,5 +1,7 @@
 <!--pages/history/history.wxml-->
 <view class='ido-history'>
+  <loading loadingShow="{{loadingShow}}"></loading>
+
   <view class='top'>
     历史数据
   </view>
@@ -15,7 +17,7 @@
     <view class=''>再不动起来就废了</view>
   </view>
   <view class='bottom'>
-    <image src='/image/loading.PNG'></image>
+    <image src='/image/loading.png'></image>
     <view class='text'>
       定制你的运动计划
     </view>

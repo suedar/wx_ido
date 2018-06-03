@@ -32,7 +32,7 @@
 }
 .ido-history .content .item .middle {
   height: 2vh;
-  background: red;
+  background: #ccc;
   border-radius: 5px;
   box-shadow: 1px 2px 3px #cecece;
   margin-right: 8px;

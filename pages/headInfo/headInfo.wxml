@@ -2,7 +2,7 @@
 <view class='ido-headInfo' >
   <loading loadingShow="{{loadingShow}}"></loading>
   <!-- <commonBlur loadingShow="{{loadingShow}}"> -->
-    <view>
+    <!-- <view> -->
     <view class='top' bindtap='getDown'>i do定制运动</view>
   <view class='image' bindtap='getDown'>
     <image src="{{userData.avatarUrl ? userData.avatarUrl : ''}}"></image>
@@ -45,7 +45,7 @@
         </view>
     </view>
     </scroll-view>
-    </view>
+    <!-- </view> -->
   <!-- </commonBlur> -->
   
 </view>

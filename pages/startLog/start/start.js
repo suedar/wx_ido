@@ -24,22 +24,21 @@ Page({
             success: (res) => {
               needInfo.iv = res.iv;
               needInfo.encryptedData = res.encryptedData;
-              console.log(needInfo)
+              // console.log(needInfo)
               wx.request({
                 url: 'https://wxapi.devoted.net.cn/user/oauth',
                 method: 'POST',
                 data: needInfo,
                 success: (response) => {
-                  if (response.statusCode !== 500) {
                     wx.setStorageSync('userData', response.data.data) 
                     wx.setStorageSync('openId', response.data.data.openId)
                     resolve(response.data.data.openId);
-                  }
+                  // }
                 }
               })
-            }
+            },
           })
-        }
+        },
       })
     }).then((res)=> {
       let openId = res
@@ -49,13 +48,15 @@ Page({
         data: {openId: openId},
         success: (res) => {
           if (res.data.data) {
-            // require
-            // console.log(res.data.data)
             setLevel(res.data.data.level);            
           }
           else {
             setLevel(0);
           }
+          // return ;
+        },
+        fail: (err) => {
+          console.log(err)
         }
       })      
     }).then(() => {
@@ -67,17 +68,28 @@ Page({
             key: 'word',
             data: res.data.data.hitokoto
           })
+          // return ;
+        },
+        fail: (err) => {
+          console.log(err)
         }
       })
+      // console.log(333)
     }).then(() => {
       // 请求完设置一些东西
-      setClockDay();
-      setTarget();
-    }).then(() => {
+      // wx.clearStorageSync()
+      // console.log(333)
+      setClockDay();                  
+      setTarget().then((res) => {
+        console.log(333)
         wx.redirectTo({
-        url: '../../main/main/main',
+          url: '../../main/main/main',
+        })
       })
-    }).catch(() => {
+    }).catch((err) => {
+      // wx.showToast({
+      //   title: err,
+      // })
       wx.navigateBack({
         delta: -1
       })

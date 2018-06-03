@@ -11,7 +11,8 @@ Page({
       ['好一个瞒天过海', '天网恢恢疏而不漏！']
     ],
     indicatorDots: true,
-    font: []
+    font: [],
+    loadingShow: true
   },
   getMargin(item, index) {
     let size = item.length;
@@ -34,25 +35,22 @@ Page({
       tempArr.push(this.getMargin(item, index));
     })
     const color = this.randArr([
-      { bg: 'fcf3ca', color: 'ef7b7b' },
-      { bg: 'c4eada', color: '919190' },
-      { bg: '97de95', color: '08c299' },
-      { bg: 'dde0ab', color: 'feffdf' },
-      { bg: 'a2738c', color: 'eaafaf' },
-      { bg: '307672', color: 'e4eddb' },
-      { bg: 'ff8364', color: 'ff4d4d' },
-      { bg: 'fa9856', color: 'ede862' },
-      { bg: '7e6752', color: 'f4eec0' },
-      { bg: 'f2d1a8', color: 'ebebeb' },
-      { bg: 'f7f6e7', color: 'c1c0b9' },
-      { bg: 'e99b9b', color: 'ffd8d8' },
-      { bg: 'fafafa', color: 'ffe9e3' },
-      { bg: 'f38181', color: '756c83' },
-      { bg: 'f8f398', color: 'e46161' },
-      { bg: '4a2c2c', color: 'd3504a' },
-      { bg: 'f5fac8', color: 'aee8e6' },
+      { bg: 'FFEBB5', color: 'ffcb24' },
+      { bg: 'D9C1D7', color: '943D92' },
+      { bg: '4F4D4D', color: 'ffffff' },
+      { bg: 'E4F4F5', color: '68BCDD' },
+      { bg: '68BCDD', color: 'ffffff' },
+      { bg: 'FFA07B', color: 'f3715c' },
+      { bg: '708090', color: 'F8F8FF' },
+      { bg: '9C9EA1', color: 'fafda9' },
+      { bg: 'BFB691', color: '544946' },
+      { bg: 'FFFAFA', color: '48414A' },
+      { bg: 'fff990', color: 'e46161' },
+      { bg: 'f5fac8', color: 'ff2b58' },
       { bg: 'd4a5a5', color: 'ffecda' },
-      { bg: 'fb5660', color: '464545' }
+      { bg: 'fb5660', color: '464545' },
+      { bg: 'f09f9f', color: 'FFE9E3' },
+      { bg: 'bceabc', color: '1f581f' }
     ])
 
     this.setData({
@@ -64,6 +62,7 @@ Page({
   },
   onLoad: function (options) {
     // console.log(this)
+    // new P
     this.changeAll();
     let initData = this.data.constData
     // console.log(initData)
@@ -98,12 +97,15 @@ Page({
         data: {id},
         method: 'POST',
         success: (res) => {
-          console.log(res)
+          // console.log(res)
           let sidArr = [];
           res.data.data.forEach((item) => {
             sidArr.push(item.sid);
           })
           wx.setStorageSync('sidArr', sidArr);
+          this.setData({
+            loadingShow: false
+          })
         }
       })
     })
@@ -130,6 +132,12 @@ Page({
     if (index < showday) {
       wx.navigateTo({
         url: '../story/story?index=' + index,
+      })
+    }
+    else {
+      wx.showToast({
+        title: '还不能看噢',
+        icon: 'none'
       })
     }
     

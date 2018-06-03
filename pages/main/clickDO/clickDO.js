@@ -204,7 +204,7 @@ Page({
           if (now > 22) {
             let flag = wx.getStorageSync('flag');
             if (!flag) {
-              if (percent >= 100) {
+              if (res >= 100) {
                 this.setData({
                   isDone: true,
                   isFinish: true                  
@@ -216,6 +216,8 @@ Page({
                   isFinish: false
                 })
               }
+              wx.setStorageSync('flag', 1);
+              resolve()
             }
             else {
               resolve();
