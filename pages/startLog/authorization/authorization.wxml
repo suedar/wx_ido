@@ -1,0 +1,15 @@
+<!--pages/startLog/authorization/authorization.wxml-->
+<view class='ido-auth'>
+  <view class='top'>
+    <image src='/image/sport.jpg'></image>
+    <view>I do</view>
+  </view>
+  <view class='dear'>
+    尊敬的用户，请确认授权以下信息
+  </view>
+  <view class='get'>
+    <view class='circle'></view>
+    <view>获取你的公开信息（昵称、头像等）</view>
+  </view>
+  <button type='primary' bindgetuserinfo="getUserInfo" open-type="getUserInfo" lang="zh_CN">确认登陆</button>
+</view>

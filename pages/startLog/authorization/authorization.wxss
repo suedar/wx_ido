@@ -1,0 +1,45 @@
+/* pages/startLog/authorization/authorization.wxss */
+.ido-auth{
+
+}
+.ido-auth .top {
+  width: 30vw;
+  margin: 5vh auto;
+  text-align: center;
+}
+.ido-auth .top image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.ido-auth .dear {
+  border-top: .3px solid #cecece;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 3vh;
+}
+.ido-auth .get {
+  width: 90vw;
+  margin: 3vh auto;
+  margin-bottom: 4vh;
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+}
+.ido-auth .get view {
+  display: inline-block;
+}
+.ido-auth .get .circle{
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 8vw;
+}
+.ido-auth button {
+  width: 80vw;
+}
+.ido-auth .blank{
+  width: 100vw;
+  height: 100vh;
+}

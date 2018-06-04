@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -132,6 +132,18 @@
 					"id": -1,
 					"name": "线索详情页",
 					"pathName": "pages/story/story",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "授权页",
+					"pathName": "pages/startLog/authorization/authorization",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "blur",
+					"pathName": "pages/main/commonBlur/commonBlur",
 					"query": ""
 				}
 			]

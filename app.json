@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/startLog/authorization/authorization",    
     "pages/startLog/start/start",
     "pages/main/main/main",
     "pages/main/commonHead/commonHead",

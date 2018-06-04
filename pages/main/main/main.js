@@ -15,19 +15,38 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let userData = wx.getStorageSync('userData')
-    // console.log(userData)
-    this.setData({
-      userData
-    })
-    
-    let word = wx.getStorage({
-      key: 'word',
-      success: res => {
-        this.setData({
-          word: res.data
-        })
-      },
+    new Promise((resolve) => {
+      wx.getSetting({
+        success: (response) => {
+          // console.log(response)
+          if (!response.authSetting['scope.werun']) {
+            wx.authorize({
+              scope: 'scope.werun',
+              success: () => {
+                resolve()
+              }
+            })
+          }
+          else {
+            resolve();
+          }
+        }
+      })
+    }).then(() => {
+      let userData = wx.getStorageSync('userData')
+      // console.log(userData)
+      this.setData({
+        userData
+      })
+
+      let word = wx.getStorage({
+        key: 'word',
+        success: res => {
+          this.setData({
+            word: res.data
+          })
+        },
+      })
     })
   },
   clickDO() { 

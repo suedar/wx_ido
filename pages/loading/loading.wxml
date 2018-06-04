@@ -6,12 +6,12 @@
               <view class='image'></view>
               <text class='center'>Loading<text class='dotting'></text></text>
         </view>
-        <view class='bottom'>
+        <!-- <view class='bottom'>
           <view class='image'>
             <image src='/image/loading.png'></image>
           </view>
           <view class='word'>定制你的运动计划</view>
-        </view>
+        </view> -->
     </view>
    </commonBlur> 
 

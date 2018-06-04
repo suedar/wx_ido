@@ -12,88 +12,139 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    new Promise((resolve, reject) => {
-      let needInfo = {};      
-      let openIdInfo = '';
-      wx.login({
-        success: res => {
-          needInfo.code = res.code;
-          openIdInfo = res.code;
-          wx.getUserInfo({
-            success: (res) => {
-              needInfo.iv = res.iv;
-              needInfo.encryptedData = res.encryptedData;
-              // console.log(needInfo)
-              wx.request({
-                url: 'https://wxapi.devoted.net.cn/user/oauth',
-                method: 'POST',
-                data: needInfo,
-                success: (response) => {
-                    wx.setStorageSync('userData', response.data.data) 
-                    wx.setStorageSync('openId', response.data.data.openId)
-                    resolve(response.data.data.openId);
-                  // }
-                }
-              })
-            },
-          })
-        },
-      })
-    }).then((res)=> {
-      let openId = res
-      wx.request({
-        url: 'https://wxapi.devoted.net.cn/user/stepInfo',
-        method: 'POST',
-        data: {openId: openId},
-        success: (res) => {
-          if (res.data.data) {
-            setLevel(res.data.data.level);            
+  getAuth() {
+    return new Promise((resolve) => {
+      wx.getSetting({
+        success: (response) => {
+          let scopeArr = []
+          if (!response.authSetting['scope.werun']) {
+            scopeArr.push('scope.werun');
+            wx.authorize({
+              scope: 'scope.werun',
+              success: () => {
+                // console.log('yes')
+                resolve()
+              },
+              fail: () => {
+                wx.showToast({
+                  title: '给个权限嘛大人~',
+                })
+                wx.authorize({
+                  scope: 'scope.werun',
+                  success: () => {
+                    // console.log('yes')
+                    resolve()
+                  },
+                  fail: () => {
+                    wx.navigateBack({
+                      delta: -1
+                    })
+                  }
+                })
+              }
+            })
           }
-          else {
-            setLevel(0);
-          }
-          // return ;
-        },
-        fail: (err) => {
-          console.log(err)
+          resolve();          
         }
-      })      
-    }).then(() => {
-      wx.request({
-        url: 'https://wxapi.devoted.net.cn/sport/hitokoto',
-        success: (res) => {
-          // console.log(res)
-          wx.setStorage({
-            key: 'word',
-            data: res.data.data.hitokoto
-          })
-          // return ;
-        },
-        fail: (err) => {
-          console.log(err)
-        }
-      })
-      // console.log(333)
-    }).then(() => {
-      // 请求完设置一些东西
-      // wx.clearStorageSync()
-      // console.log(333)
-      setClockDay();                  
-      setTarget().then((res) => {
-        console.log(333)
-        wx.redirectTo({
-          url: '../../main/main/main',
-        })
-      })
-    }).catch((err) => {
-      // wx.showToast({
-      //   title: err,
-      // })
-      wx.navigateBack({
-        delta: -1
       })
     })
+  },
+  onLoad: function (options) {
+    // wx.clearStorage()
+    let today = wx.getStorageSync('today');
+    if (today !== new Date().getDate()) {
+      wx.clearStorage();
+      wx.setStorageSync('today', new Date().getDate())      
+    }
+      new Promise((resolve, reject) => {
+        let needInfo = {};
+        let openIdInfo = '';
+        wx.login({
+          success: res => {
+            needInfo.code = res.code;
+            openIdInfo = res.code;
+            wx.getUserInfo({
+              success: (res) => {
+                needInfo.iv = res.iv;
+                needInfo.encryptedData = res.encryptedData;
+                // console.log(needInfo)
+                wx.request({
+                  url: 'https://wxapi.devoted.net.cn/user/oauth',
+                  method: 'POST',
+                  data: needInfo,
+                  success: (response) => {
+                    wx.setStorageSync('userData', response.data.data)
+                    wx.setStorageSync('openId', response.data.data.openId)
+                    resolve(response.data.data.openId);
+                  },
+                  fail: (err) => {
+                    console.log(err)
+                  }
+                })
+              },
+              fail: (err) => {
+                console.log(err)
+              }
+            })
+          },
+          fail: (err) => {
+            console.log(err)
+          }
+        })
+      }).then((res) => {
+        let openId = res
+        wx.request({
+          url: 'https://wxapi.devoted.net.cn/user/stepInfo',
+          method: 'POST',
+          data: { openId: openId },
+          success: (res) => {
+            if (res.data.data) {
+              setLevel(res.data.data.level);
+            }
+            else {
+              setLevel(0);
+            }
+            return ;
+          },
+          fail: (err) => {
+            console.log(err)
+          }
+        })
+      }).then(() => {
+        wx.request({
+          url: 'https://wxapi.devoted.net.cn/sport/hitokoto',
+          success: (res) => {
+            // console.log(res)
+            wx.setStorage({
+              key: 'word',
+              data: res.data.data.hitokoto
+            })
+            return ;
+          },
+          fail: (err) => {
+            console.log(err)
+          }
+        })
+        // console.log(333)
+      }).then(() => {
+        // 请求完设置一些东西
+        // wx.clearStorageSync()
+        // console.log(333)
+        setClockDay();
+        setTarget().then((res) => {
+          // console.log(333)
+          wx.redirectTo({
+            url: '../../main/main/main',
+          })
+        })
+      }).catch((err) => {
+        // wx.showToast({
+        //   title: err,
+        // })
+        wx.navigateBack({
+          delta: -1
+        })
+      })
 
     // 这里要多做一步问询的处理 
     
