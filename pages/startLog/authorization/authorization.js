@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    cover: true
   },
 
   /**
@@ -15,7 +15,9 @@ Page({
     wx.getSetting({
       success: (response) => {
         if (!response.authSetting['scope.userInfo']) {
-
+          this.setData({
+            cover: false
+          })
         }
         else {
           wx.redirectTo({

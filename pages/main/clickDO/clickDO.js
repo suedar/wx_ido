@@ -31,7 +31,7 @@ Page({
   getSportData() {
     return new Promise((resolve) => {
       let runData = {}
-      wx.getWeRunData({
+      wx.getWeRunData({ 
         success: (res) => {
           runData.iv = res.iv;
           runData.encryptedData = res.encryptedData;

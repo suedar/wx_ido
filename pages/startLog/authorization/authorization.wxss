@@ -2,6 +2,17 @@
 .ido-auth{
 
 }
+.cover {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #fff;
+  z-index: 333;
+}
 .ido-auth .top {
   width: 30vw;
   margin: 5vh auto;

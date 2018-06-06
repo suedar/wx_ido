@@ -8,7 +8,28 @@ function getOpenId () {
   let openId = wx.getStorageSync('openId')
   // console.log(openId)
   if (!openId) {
-    
+    wx.login({
+      success: res => {
+        let needInfo = {};
+        needInfo.code = res.code;
+        wx.getUserInfo({
+          success: (res) => {
+            needInfo.iv = res.iv;
+            needInfo.encryptedData = res.encryptedData;
+            wx.request({
+              url: 'https://wxapi.devoted.net.cn/user/oauth',
+              method: 'POST',
+              data: needInfo,
+              success: (response) => {
+                wx.setStorageSync('userData', response.data.data)
+                wx.setStorageSync('openId', response.data.data.openId)
+                return response.data.data.openId
+              }
+            })
+          }
+        })
+      }
+    })
   } else {
     // console.log(openId)
     return openId;
@@ -47,13 +68,14 @@ function setTarget(isIncrease = 0) {
     }
     else {
       let openId = getOpenId()
+      console.log(isIncrease, openId)
       wx.request({
         url: 'https://wxapi.devoted.net.cn/sport/targetStep',
         method: 'POST',
         data: { isIncrease, openId },
         success: (res) => {
+          console.log(res)
           wx.setStorageSync('targetStep', res.data.data.targetStep)
-          console.log(2333)
           resolve();
         }
       })

@@ -4,6 +4,7 @@ Component({
   },
   data: { // 估计是用函数的方式
     // num: 30
+    // loadingShow: true
   },
   properties: {
     loadingShow: {

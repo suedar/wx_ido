@@ -12,43 +12,6 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  getAuth() {
-    return new Promise((resolve) => {
-      wx.getSetting({
-        success: (response) => {
-          let scopeArr = []
-          if (!response.authSetting['scope.werun']) {
-            scopeArr.push('scope.werun');
-            wx.authorize({
-              scope: 'scope.werun',
-              success: () => {
-                // console.log('yes')
-                resolve()
-              },
-              fail: () => {
-                wx.showToast({
-                  title: '给个权限嘛大人~',
-                })
-                wx.authorize({
-                  scope: 'scope.werun',
-                  success: () => {
-                    // console.log('yes')
-                    resolve()
-                  },
-                  fail: () => {
-                    wx.navigateBack({
-                      delta: -1
-                    })
-                  }
-                })
-              }
-            })
-          }
-          resolve();          
-        }
-      })
-    })
-  },
   onLoad: function (options) {
     // wx.clearStorage()
     let today = wx.getStorageSync('today');
@@ -67,7 +30,6 @@ Page({
               success: (res) => {
                 needInfo.iv = res.iv;
                 needInfo.encryptedData = res.encryptedData;
-                // console.log(needInfo)
                 wx.request({
                   url: 'https://wxapi.devoted.net.cn/user/oauth',
                   method: 'POST',
