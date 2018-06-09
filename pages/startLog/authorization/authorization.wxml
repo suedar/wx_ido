@@ -1,6 +1,6 @@
 <!--pages/startLog/authorization/authorization.wxml-->
 <view class='ido-auth'>
-  <view class='cover' s-if="{{cover}}"></view>
+   <view class='cover' wx:if="{{cover}}"></view> 
   <view class='top'>
     <image src='/image/sport.jpg'></image>
     <view>I do</view>

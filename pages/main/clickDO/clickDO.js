@@ -72,37 +72,37 @@ Page({
   },
   checkUpgrade() {
     // console.log(333)
-    let level = this.level;
-    let sportDay = this.sportDay;
-    // console.log(sportDay)
+    let level = this.data.level;
+    let sportDay = this.data.sportDay;
+    // console.log(sportDay, level)
     let upGrade = false;
     let nick = '新手小白'
     if (sportDay === 1) {
-      if (level === 0) {
+      if (level === 1) {
         upGrade = true;
         nick = '包子布衣'
       }
     }
     else if (sportDay === 7) {
-      if(level === 1) {
+      if(level === 2) {
         upGrade = true;
         nick = '豆腐秀才'
       }
     } 
     else if (sportDay === 21) {
-      if (level === 2) {
+      if (level === 3) {
         upGrade = true
         nick = '青团举人'
       }
     }
     else if (sportDay === 39) {
-      if (level === 3) {
+      if (level === 4) {
         upGrade = true
         nick = '酱面学士'        
       }
     }
     else if (sportDay === 66) {
-      if (level === 4) {
+      if (level === 5) {
         upGrade = true
         nick = '火锅翰林'        
       }
@@ -208,7 +208,7 @@ Page({
           // console.log(res)
         new Promise((resolve) => {
           let now = new Date().getHours();
-          // if (now > 22) {
+          if (now > 22) {
             let flag = wx.getStorageSync('flag');
             if (!flag) {
               let isClock = 0;
@@ -241,10 +241,10 @@ Page({
                 success: (res) => {}
               })
               resolve()
-            // }
-            // else {
-            //   resolve();
-            // }
+            }
+            else {
+              resolve();
+            }
           }
           else {
             resolve()
