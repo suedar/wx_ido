@@ -136,7 +136,7 @@ Page({
     }
     else {
       wx.showToast({
-        title: '还不能看噢',
+        title: '打卡天数不够，还不能看噢',
         icon: 'none'
       })
     }
