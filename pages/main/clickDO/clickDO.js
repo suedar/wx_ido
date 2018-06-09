@@ -23,7 +23,8 @@ Page({
     todayStep: 123,
     sportDay: 12,
     level: 0,
-    nick: '豆腐秀才'
+    nick: '豆腐秀才',
+    clockDay: 0
   },
   /**
    * 生命周期函数--监听页面加载
@@ -70,8 +71,10 @@ Page({
     })
   },
   checkUpgrade() {
+    // console.log(333)
     let level = this.level;
     let sportDay = this.sportDay;
+    // console.log(sportDay)
     let upGrade = false;
     let nick = '新手小白'
     if (sportDay === 1) {
@@ -104,6 +107,8 @@ Page({
         nick = '火锅翰林'        
       }
     }
+    // console.log(upGrade)
+    upGrade = true;
     this.setData({
       isUpgrade: upGrade,
       nick
@@ -118,9 +123,11 @@ Page({
         data: { openId },
         success: (res) => {
           let data = res.data.data;
+          // console.log(data)
           this.setData({
             sportDay: data.sportDay,
-            level: data.level
+            level: data.level,
+            clockDay: data.clockDay
           })
           resolve()
         }
@@ -198,17 +205,19 @@ Page({
       }).then((res) => {
         return this.setSportData(res)
         }).then((res) => {
-          console.log(res)
+          // console.log(res)
         new Promise((resolve) => {
           let now = new Date().getHours();
-          if (now > 22) {
+          // if (now > 22) {
             let flag = wx.getStorageSync('flag');
             if (!flag) {
+              let isClock = 0;
               if (res >= 100) {
                 this.setData({
                   isDone: true,
                   isFinish: true                  
                 })
+                isClock = 1;
               }
               else {
                 this.setData({
@@ -217,11 +226,25 @@ Page({
                 })
               }
               wx.setStorageSync('flag', 1);
+              let data = this.data;
+              let postInfo = {
+                calorie: data.todayCal,
+                openId: getOpenId(),
+                stepNum: data.todayStep,
+                targetStep: wx.getStorageSync('targetStep'),
+                isClock
+              }
+              wx.request({
+                url: 'https://wxapi.devoted.net.cn/sport/addSportRecord',
+                method: 'POST',
+                data: postInfo,
+                success: (res) => {}
+              })
               resolve()
-            }
-            else {
-              resolve();
-            }
+            // }
+            // else {
+            //   resolve();
+            // }
           }
           else {
             resolve()

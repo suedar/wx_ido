@@ -1,5 +1,6 @@
 /* pages/main/upgrade/upgrade.wxss */
 .ido-select {
+  background-color: #fff;
   width: 80vw;
   height: 30vh;
   border: 1px solid #868686;

@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.clearStorage()
+    wx.clearStorage()
     let today = wx.getStorageSync('today');
     if (today !== new Date().getDate()) {
       wx.clearStorage();

@@ -21,7 +21,7 @@ Component({
     },
     toInference() {
       wx.navigateTo({
-        url: '../../inference/inference',
+        url: '../../story/inference/inference',
       })
     }
   }

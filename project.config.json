@@ -118,24 +118,6 @@
 				},
 				{
 					"id": -1,
-					"name": "推理",
-					"pathName": "pages/inference/inference",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "背景",
-					"pathName": "pages/detail/detail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "线索详情页",
-					"pathName": "pages/story/story",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "授权页",
 					"pathName": "pages/startLog/authorization/authorization",
 					"query": ""

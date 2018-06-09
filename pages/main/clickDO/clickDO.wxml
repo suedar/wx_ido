@@ -18,7 +18,7 @@
    <upgrade isUpgrade="{{isUpgrade}}"></upgrade> 
     <getNewPre nickname="{{nick}}" isUpgrade="{{isUpgrade}}"></getNewPre>    
   
-    <finishCard bind:myevent="checkUpgrade" show="{{isShowCard}}" sportDay="{{sportDay}}"></finishCard>  
+    <finishCard bind:myevent="checkUpgrade" clockDay="{{clockDay}}" show="{{isShowCard}}" sportDay="{{sportDay}}"></finishCard>  
     <done bind:myevent="showFinishCard" isFinish="{{isFinish}}" footstep="{{todayStep}}" calorie="{{todayCal}}" isDone="{{isDone}}"></done>   
     <unDone bind:myevent="showCard" isUnDone="{{isUnDone}}"></unDone> 
 

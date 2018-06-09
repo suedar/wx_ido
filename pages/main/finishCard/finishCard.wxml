@@ -5,7 +5,7 @@
     <view class='daka'>
       <view class='image'>
         <image src='/image/daka.jpg'></image>
-        <view class='date'>{{dakaDate? dakaDate: 15}}
+        <view class='date'>{{clockDay}}
         <view class='day'>天</view></view>
       </view>
       <view class='word'>打卡完成</view>
