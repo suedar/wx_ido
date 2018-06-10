@@ -60,6 +60,7 @@ Page({
           method: 'POST',
           data: { openId: openId },
           success: (res) => {
+            console.log(res.data.data)
             if (res.data.data) {
               setLevel(res.data.data.level);
             }

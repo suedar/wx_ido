@@ -47,7 +47,7 @@ function sleep(ms) {
 }
 // 设置等级
 function setLevel(level = 0) {
-  // console.log(level)
+  console.log(level)
   // console.log(333)
   let userData = wx.getStorageSync('userData');
   // console.log(userData)

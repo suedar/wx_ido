@@ -58,6 +58,7 @@ Page({
     }).then((cal) => {
       let calcPos = 0;
       let totalKa = userData.totalka;
+      console.log(`打卡数${totalKa}`)
       if (totalKa === 1) {
         calcPos = 20;
       }

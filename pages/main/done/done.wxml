@@ -7,7 +7,7 @@
         <view class='head'>今日成果</view>
         <view class='content'>
           <view class='content-head'>消耗热量</view>
-          <view class='animate'>{{calorie ? calorie : 255}}大卡</view>
+          <view class='animate'>{{calorie}}大卡</view>
         </view>
         <view class='content'>
           <view class='content-head'>一共走了</view>
