@@ -35,7 +35,7 @@
 .ido-select .bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: .7rem;
+   margin-top: 50rpx; 
 }
 .ido-select .bottom .front {
   width: 3.5rem;   
@@ -54,7 +54,7 @@
 }
 .ido-select .bottom .front::after{
   position: absolute;
-  font-size: 14px;
+  font-size: 30rpx;
    left: 6px; 
    top: 4px;
     /* bottom: -50px;   */
@@ -63,7 +63,7 @@
 }
 .ido-select .bottom .end::after{
   position: absolute;
-  font-size: 14px;
+  font-size: 30rpx;
    right: 6px; 
    top: 4px;
     /* bottom: -50px;   */

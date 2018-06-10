@@ -168,12 +168,14 @@
   /* text-align: center; */
 }
 .ido-headInfo .headInfo-preview .item .item-needDay {
-  font-size: 14px;
+  font-size: 25rpx;
   /* text-align: center; */
   margin-left: 20rpx;
 }
 .ido-headInfo .headInfo-preview .item .item-nick {
   margin-left: 60rpx;
+  font-size: 28rpx;
+  
 }
 .ido-headInfo .headInfo-preview .item .item-pre {
   font-size: 10px;

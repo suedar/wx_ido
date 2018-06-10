@@ -58,26 +58,25 @@ Page({
     }).then((cal) => {
       let calcPos = 0;
       let totalKa = userData.totalka;
-      console.log(`打卡数${totalKa}`)
+      // totalKa = 0;
       if (totalKa === 1) {
         calcPos = 20;
       }
-      else if (totalKa < 7) {
+      else if (totalKa > 1 &&totalKa < 7) {
         calcPos = 20 + (totalKa - 1) / 6 * 20
       }
-      else if (totalKa < 21) {
+      else if (totalKa >= 7 &&totalKa < 21) {
         calcPos = 40 + (totalKa - 7) / 14 *20
       }
-      else if (totalKa < 39) {
+      else if (totalKa >=21 && totalKa < 39) {
         calcPos = 60 + (totalKa - 21) / 18 * 20
       }
-      else if (totalKa < 66) {
+      else if (totalKa >= 39 && totalKa < 66) {
         calcPos = 80 + (totalKa - 39) / 27 * 20
       }
-      else {
+      else if (totalKa >= 66) {
         calcPos = 100
       }
-      console.log(userData)
       this.setData({
         calcPos,
         loadingShow: false,

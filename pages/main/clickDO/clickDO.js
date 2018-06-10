@@ -206,26 +206,26 @@ Page({
       }).then((res) => {
         return this.setSportData(res)
         }).then((res) => {
-          console.log(res)
+          // console.log(res)
         new Promise((resolve) => {
           let now = new Date().getHours();
-          // if (now > 22) {
-          //   let flag = wx.getStorageSync('flag');
-          //   if (!flag) {
+          if (now > 22) {
+            let flag = wx.getStorageSync('flag');
+            if (!flag) {
               let isClock = 0;
-              // if (res >= 100) {
+              if (res >= 100) {
                 this.setData({
                   isDone: true,
                   isFinish: true                  
                 })
                 isClock = 1;
-              // }
-              // else {
-              //   this.setData({
-              //     isUnDone: true,
-              //     isFinish: false
-              //   })
-              // }
+              }
+              else {
+                this.setData({
+                  isUnDone: true,
+                  isFinish: false
+                })
+              }
               wx.setStorageSync('flag', 1);
               let data = this.data;
               let postInfo = {
@@ -242,14 +242,18 @@ Page({
                 success: (res) => {}
               })
               resolve()
-            // }
-            // else {
-            //   resolve();
-            // }
-          // }
-          // else {
-          //   resolve()
-          // }
+            }
+            else {
+              resolve();
+            }
+          }
+          else {
+            // this.setData({
+            //   isDone: true,
+            //   isFinish: true
+            // })
+            resolve()
+          }
         }).then(() => {
           this.setData({
             loadingShow: false
