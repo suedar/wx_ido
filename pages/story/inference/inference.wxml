@@ -2,7 +2,7 @@
 <view class='ido-inference'>
   <view class='top'>
     <view class='image'>
-      <image src='/image/icon/menu.png'></image>
+      <image src=''></image>
     </view>
   </view>
   <view class="ido-scroll">
