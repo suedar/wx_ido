@@ -3,7 +3,7 @@
   <loading loadingShow="{{loadingShow}}"></loading>
   <!-- <commonBlur loadingShow="{{loadingShow}}"> -->
     <!-- <view> -->
-    <view class='top' bindtap='getDown'>i Do定制运动</view>
+    <view class='top' bindtap='getDown'>i do定制运动</view>
   <view class='image' bindtap='getDown'>
     <image src="{{userData.avatarUrl ? userData.avatarUrl : ''}}"></image>
   </view>
