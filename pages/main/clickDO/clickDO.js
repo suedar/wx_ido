@@ -248,10 +248,10 @@ Page({
             }
           }
           else {
-            // this.setData({
-            //   isDone: true,
-            //   isFinish: true
-            // })
+            this.setData({
+              isDone: true,
+              isFinish: true
+            })
             resolve()
           }
         }).then(() => {
