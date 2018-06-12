@@ -5,6 +5,7 @@
   height: 30vh;
   border: 1px solid #868686;
   box-shadow: 3px 4px 5px #cccccc;
+  position: relative;
 }
 .ido-select .icon {
   padding: 15px 0 0 10px;
@@ -34,8 +35,11 @@
 }
 .ido-select .bottom {
   display: flex;
+  width: 100%;
   justify-content: space-between;
-   margin-top: 50rpx; 
+   /* margin-top: 50rpx;  */
+   position: absolute;
+   bottom: 0px;
 }
 .ido-select .bottom .front {
   width: 3.5rem;   
@@ -54,7 +58,8 @@
 }
 .ido-select .bottom .front::after{
   position: absolute;
-  font-size: 30rpx;
+  white-space: nowrap;
+  font-size: 28rpx;
    left: 6px; 
    top: 4px;
     /* bottom: -50px;   */
@@ -62,8 +67,9 @@
   content: '加大强度';
 }
 .ido-select .bottom .end::after{
+  white-space: nowrap;
   position: absolute;
-  font-size: 30rpx;
+  font-size: 28rpx;
    right: 6px; 
    top: 4px;
     /* bottom: -50px;   */

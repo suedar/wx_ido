@@ -11,7 +11,7 @@
         </view>
         <view class='content'>
           <view class='content-head'>一共走了</view>
-          <view class='animate foot'>{{footstep ? footstep : 6666}}步</view>
+          <view class='animate foot'>{{footstep}}步</view>
         </view>
       </view>
       <view class='word'>{{isFinish ? 'bingo!元气满满的一天' : 'fighting! 明日再战'}}</view>

@@ -148,7 +148,7 @@ Page({
         data: { stepNum: todayStep },
         success: (res) => {
           let data = res.data.data;
-          console.log(data)
+          // console.log(data)
           this.setData({
             todayCal: data.calorie,
             todayStep
@@ -166,6 +166,7 @@ Page({
       letter,
       nick: userData.nick
     })
+    // console.log(`1`,userData, letter)
     // this.rollData([1,2,3,4])
     // 加载下面的数据
 
@@ -204,13 +205,18 @@ Page({
         // 请求今日步数
         return this.getSportData();
       }).then((res) => {
+        // console.log(2, res)
         return this.setSportData(res)
         }).then((res) => {
+          // console.log(3, res)          
           // console.log(res)
         new Promise((resolve) => {
           let now = new Date().getHours();
-          if (now > 22) {
-            let flag = wx.getStorageSync('flag');
+          console.log(now)
+          // now = 23;
+          // res = 100;
+          if (now >= 22) {
+            let flag = wx.getStorageSync('flag') || false;
             if (!flag) {
               let isClock = 0;
               if (res >= 100) {
@@ -248,10 +254,6 @@ Page({
             }
           }
           else {
-            this.setData({
-              isDone: true,
-              isFinish: true
-            })
             resolve()
           }
         }).then(() => {

@@ -47,7 +47,7 @@ function sleep(ms) {
 }
 // 设置等级
 function setLevel(level = 0) {
-  console.log(level)
+  // console.log(level)
   // console.log(333)
   let userData = wx.getStorageSync('userData');
   // console.log(userData)
@@ -68,13 +68,13 @@ function setTarget(isIncrease = 0) {
     }
     else {
       let openId = getOpenId()
-      console.log(isIncrease, openId)
+      // console.log(isIncrease, openId)
       wx.request({
         url: 'https://wxapi.devoted.net.cn/sport/targetStep',
         method: 'POST',
         data: { isIncrease, openId },
         success: (res) => {
-          console.log(res)
+          // console.log(res)
           wx.setStorageSync('targetStep', res.data.data.targetStep)
           resolve();
         }

@@ -64,6 +64,6 @@
    color: white;
    font-size: 15px;    
   /* color: #000; */
-   top: 10rpx;
+   top: 5rpx;
   right: 10px;
 }
