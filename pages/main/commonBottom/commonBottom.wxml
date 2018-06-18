@@ -1,7 +1,7 @@
 <!--pages/main/commonBottom/commonBottom.wxml-->
 <view class='main-buttom'>
   <view bindtap='toHistory'>
-    <image src='/image/icon/foot.png'></image>
+    <image src='http://oz3on0sof.bkt.clouddn.com/foot.png'></image>
   </view>
-  <view bindtap='toInference'> <image src='/image/icon/link.png'></image></view>
+  <view bindtap='toInference'> <image src='http://oz3on0sof.bkt.clouddn.com/link.png'></image></view>
 </view>

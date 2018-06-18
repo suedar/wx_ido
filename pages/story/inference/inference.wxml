@@ -25,7 +25,7 @@
     <view class='bottom-content' bindtap='toBg'>
       案件背景调查
       <!-- <view class='image'> -->
-        <image src='/image/icon/lock.png'></image>
+        <image src='http://oz3on0sof.bkt.clouddn.com/lock.png'></image>
       <!-- </view> -->
     </view>
   </view>

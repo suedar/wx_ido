@@ -4,7 +4,7 @@
   <commonBlur>
     <view class='daka'>
       <view class='image'>
-        <image src='/image/daka.jpg'></image>
+        <image src='http://oz3on0sof.bkt.clouddn.com/daka.jpg'></image>
         <view class='date'>{{clockDay}}
         <view class='day'>天</view></view>
       </view>

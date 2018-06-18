@@ -4,7 +4,7 @@
       <view class='ido-select'>
         <view class='icon'>
           <!-- <view class=''></view> -->
-          <image src='/image/icon/fan.png'></image>
+          <image src='http://oz3on0sof.bkt.clouddn.com/fan.png'></image>
         </view>
         <view class='content'>
           <view>hey!</view>

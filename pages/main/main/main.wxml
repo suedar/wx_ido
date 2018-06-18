@@ -5,7 +5,7 @@
     <view class='main-middle-top'>
       <view class='linkLeft'></view>
       <view class='linkMiddle'>
-        <image src='/image/icon/diamond.png'></image>
+        <image src='http://oz3on0sof.bkt.clouddn.com/diamond.png'></image>
       </view>
       <view class='linkRight'></view>
     </view>

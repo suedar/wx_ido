@@ -3,16 +3,16 @@
     <view class='start'>
       <view class='top'>
           <view class='cover'>
-            <image class='startLog-pos' src='/image/icon/x.png'></image>
+            <image class='startLog-pos' src='http://oz3on0sof.bkt.clouddn.com/x.png'></image>
           </view>
          <view class='startLog-image'>
-            <image class='startLog-smallPic' src='/image/icon/flag.png'></image>     
+            <image class='startLog-smallPic' src='http://oz3on0sof.bkt.clouddn.com/flag.png'></image>     
          </view>
          <view class='startLog-word'>I<view class='startLog-dis'>Do</view></view>
          <view>2018</view>
       </view>
       <view class='middle'>
-        <image src='/image/heart.gif'></image>
+        <image src='http://oz3on0sof.bkt.clouddn.com/heart.gif'></image>
       </view>
       <view class='bottom'>
         <view class='line'>|</view>

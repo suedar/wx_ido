@@ -44,14 +44,14 @@
     <view class='predict'></view>
     <view class='calorie-transfer'>
       <view class='fire'>
-        <image src='/image/icon/fire.png'></image>
+        <image src='http://oz3on0sof.bkt.clouddn.com/fire.png'></image>
       </view>
       <view class='calorieData'>{{calorieData}}</view>
       <view class='unit'>kcal</view>
       <view class='about'>≈</view>
       <view class='foodNumber'>{{foodNumber}}</view>
       <view class='foodImage'>
-        <image src='/image/icon/{{foodImage}}.png'></image>
+        <image src='http://oz3on0sof.bkt.clouddn.com/{{foodImage}}.png'></image>
       </view>
     </view>
   </view>
