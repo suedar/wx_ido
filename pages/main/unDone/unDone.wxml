@@ -7,7 +7,7 @@
           难过到我对话框都黑了        
         </view>
         <view class='lightning' bindtap='close'>
-          <image src="/image/icon/lightning.png"></image>
+          <image src="http://oz3on0sof.bkt.clouddn.com/lightning.png"></image>
         </view>
       </view>
     </commonBlur>

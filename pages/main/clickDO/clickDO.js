@@ -73,8 +73,9 @@ Page({
   checkUpgrade() {
     // console.log(333)
     let level = this.data.level;
-    let sportDay = this.data.sportDay;
-    console.log(sportDay, level)
+    // 大误会 误会打卡天数为运动天数
+    let sportDay = this.data.clockDay;
+    // console.log(sportDay, level)
     let upGrade = false;
     let nick = '新手小白'
     if (sportDay <= 1) {
