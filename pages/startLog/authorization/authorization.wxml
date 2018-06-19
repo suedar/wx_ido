@@ -2,7 +2,7 @@
 <view class='ido-auth'>
    <view class='cover' wx:if="{{cover}}"></view> 
   <view class='top'>
-    <image src='/image/sport.jpg'></image>
+    <image src='http://oz3on0sof.bkt.clouddn.com/sport.jpg'></image>
     <view>I do</view>
   </view>
   <view class='dear'>
