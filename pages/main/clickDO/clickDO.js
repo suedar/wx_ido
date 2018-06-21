@@ -78,38 +78,38 @@ Page({
     // console.log(sportDay, level)
     let upGrade = false;
     let nick = '新手小白'
-    if (sportDay <= 1) {
-      if (level <= 1) {
+    if (sportDay === 1) {
+      if (level === 1) {
         upGrade = true;
         nick = '包子布衣'
       }
     }
-    else if (sportDay <= 7) {
-      if(level <= 2) {
+    else if (sportDay === 7) {
+      if(level === 2) {
         upGrade = true;
         nick = '豆腐秀才'
       }
     } 
-    else if (sportDay <= 21) {
-      if (level <= 3) {
+    else if (sportDay === 21) {
+      if (level === 3) {
         upGrade = true
         nick = '青团举人'
       }
     }
-    else if (sportDay <= 39) {
-      if (level <= 4) {
+    else if (sportDay === 39) {
+      if (level === 4) {
         upGrade = true
         nick = '酱面学士'        
       }
     }
-    else if (sportDay <= 66) {
-      if (level <= 5) {
+    else if (sportDay === 66) {
+      if (level === 5) {
         upGrade = true
         nick = '火锅翰林'        
       }
     }
     // console.log(upGrade)
-    upGrade = true;
+    // upGrade = true;
     this.setData({
       isUpgrade: upGrade,
       nick
